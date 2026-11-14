@@ -1,0 +1,118 @@
+"""
+Escenarios de analistas por resultado (movimiento esperado), solo lo publicado antes del corte salvo que se marque.
+(evento, institución, fecha, activo, escenario 'bueno'|'malo'|'otro', descripción, mov_pct (num o None), ex_ante, verificacion)
+mov_pct: movimiento esperado del activo en %, signo desde la óptica del activo (índice o moneda local; + = se aprecia/sube).
+"""
+S = [
+    # BR-2014
+    ("BR-2014-1T", "Reuters (straddle ATM)", "2014-10-02", "Ibovespa/EWZ", "otro", "Straddle ATM implica ~6% hasta fin de la semana siguiente", 6.0, 1, "pdf"),
+    ("BR-2014-2T", "XP (encuesta a 80 gestores)", "pre 1ª vuelta, rep. 19/10", "Ibovespa", "malo", "La mitad ve Ibovespa < 45.000 si gana Dilma (vs 55.723 el 17/10)", -19.2, 1, "pdf"),
+    ("BR-2014-2T", "XP (encuesta a 80 gestores)", "pre 1ª vuelta, rep. 19/10", "USD/BRL", "malo", "Dólar > 2,60, hasta 3,00 (vs 2,43)", -7.0, 1, "pdf"),
+    ("BR-2014-2T", "Reuters (straddle EWZ)", "2014-10-06", "EWZ", "otro", "Straddle EWZ ~±15% hasta fin de octubre; Petrobras ~±24%", 15.0, 1, "pdf"),
+    # BR-2018-2T
+    ("BR-2018-2T", "Nova Futura", "2018-09-24", "Ibovespa", "malo", "Haddad: Ibovespa a 60.000 o menos", -29.4, 1, "pdf"),
+    ("BR-2018-2T", "BTG Pactual", "2018-10-08", "Ibovespa", "bueno", "Bolsonaro gana: espacio hasta 105.000 (+28%)", 28.0, 1, "pdf"),
+    ("BR-2018-2T", "Citigroup", "~2018-10-09", "USD/BRL", "bueno", "BRL a 3,55 tras la 2ª vuelta (vs ~3,655 al corte)", 3.0, 1, "pdf"),
+    # BR-2022-1T
+    ("BR-2022-1T", "BGC Liquidez (mediana)", "2022-09-29", "Ibovespa", "malo", "Lula gana en 1ª: Ibovespa -3%", -3.0, 1, "si"),
+    ("BR-2022-1T", "BGC Liquidez (mediana)", "2022-09-29", "USD/BRL", "malo", "Lula gana en 1ª: dólar +2%", -2.0, 1, "si"),
+    ("BR-2022-1T", "BGC Liquidez (mediana)", "2022-09-29", "PETR4", "malo", "Lula gana en 1ª: Petrobras -8%", -8.0, 1, "pdf"),
+    ("BR-2022-1T", "BGC Liquidez (mediana)", "2022-09-29", "Ibovespa", "bueno", "Lula gana en 2ª: Ibovespa sin cambio (Bolsonaro en 1ª: +8%)", 0.0, 1, "si"),
+    # BR-2022-2T
+    ("BR-2022-2T", "BGC Liquidez (mediana)", "2022-10-28", "Ibovespa", "malo", "Lula sin impugnación: -3% (impugnado: -5%)", -3.0, 1, "pdf"),
+    ("BR-2022-2T", "BGC Liquidez (mediana)", "2022-10-28", "Ibovespa", "bueno", "Bolsonaro: +5%", 5.0, 1, "pdf"),
+    ("BR-2022-2T", "BGC Liquidez (mediana)", "2022-10-28", "PETR4", "malo", "Lula sin impugnación: -5% (impugnado: -8%)", -5.0, 1, "pdf"),
+    ("BR-2022-2T", "BGC Liquidez (mediana)", "2022-10-28", "PETR4", "bueno", "Bolsonaro: +10%", 10.0, 1, "pdf"),
+    ("BR-2022-2T", "BGC Liquidez (mediana)", "2022-10-28", "USD/BRL", "malo", "Lula sin impugnación: dólar +1%", -1.0, 1, "pdf"),
+    ("BR-2022-2T", "Citi", "2022-10-28", "USD/BRL", "bueno", "Bolsonaro: dólar -4%", 4.0, 1, "pdf"),
+    # BR-2026-1T
+    ("BR-2026-1T", "JPMorgan", "2026-09-28", "USD/BRL", "bueno", "Resultado fiscal favorable: real +6% (~4,90)", 6.0, 1, "pdf"),
+    ("BR-2026-1T", "JPMorgan", "2026-09-28", "USD/BRL", "malo", "Desfavorable: dólar hacia 5,50 (~-5%)", -5.4, 1, "pdf"),
+    ("BR-2026-1T", "JPMorgan", "2026-09-28", "Ibovespa", "otro", "Opciones implican ~6,5% de movimiento en las dos vueltas", 6.5, 1, "pdf"),
+    # BR-2026-2T
+    ("BR-2026-2T", "Monte Bravo", "2026-10-23", "Ibovespa", "malo", "Lula: valor justo ~174.000 (-15%); caída mediana del lunes 11%", -11.0, 1, "pdf"),
+    ("BR-2026-2T", "Citi (73 inversores)", "2026-10-23", "Ibovespa", "malo", "Lula: 79,5% espera caída > 5%", -5.0, 1, "si"),
+    ("BR-2026-2T", "Citi (73 inversores)", "2026-10-23", "Ibovespa", "bueno", "Flávio: 49,3% espera suba > 5%", 5.0, 1, "si"),
+    ("BR-2026-2T", "Bloomberg Economics", "2026-10-23", "USD/BRL", "malo", "Lula: real -11%", -11.0, 1, "pdf"),
+    ("BR-2026-2T", "Bloomberg Economics", "2026-10-23", "USD/BRL", "bueno", "Flávio: real +2,7%", 2.7, 1, "pdf"),
+    # MX-2024
+    ("MX-2024", "Barclays", "fines may", "USD/MXN", "malo", "SHH con 2/3: MXN -3 a -4% vs pares", -3.5, 1, "pdf"),
+    ("MX-2024", "Barclays", "fines may", "USD/MXN", "bueno", "Congreso dividido: MXN +1% vs pares", 1.0, 1, "pdf"),
+    ("MX-2024", "Monex", "2024-05-30", "USD/MXN", "malo", "Sheinbaum + mayoría calificada: 17,42-18,00 (vs 17,01)", -3.6, 1, "pdf"),
+    ("MX-2024", "UBS GWM", "sin fecha", "USD/MXN", "malo", "Mayoría calificada: MXN a ~18,5", -8.0, 1, "pdf"),
+    # IN-2024
+    ("IN-2024", "SAMCO", "2024-05-29", "Nifty", "malo", "NDA sin mayoría: corrección ~10%", -10.0, 1, "pdf"),
+    ("IN-2024", "SAMCO", "2024-05-29", "Nifty", "bueno", "NDA gana: Nifty +2 a +5%", 3.5, 1, "pdf"),
+    ("IN-2024", "Morgan Stanley", "2023-09", "Nifty", "malo", "Coalición: -5% a -25% en 3 meses", -15.0, 1, "pdf"),
+    # CL-2017-2T
+    ("CL-2017-2T", "LarrainVial", "2017-11-21", "IPSA", "bueno", "Piñera: IPSA 5.500 (vs 5.076)", 8.4, 1, "pdf"),
+    ("CL-2017-2T", "LarrainVial", "2017-11-21", "IPSA", "malo", "Guillier: IPSA 4.650", -8.4, 1, "pdf"),
+    ("CL-2017-2T", "Citi", "~2017-11-21", "IPSA", "malo", "Guillier: IPSA hasta 4.215 en el corto plazo (-17%)", -17.0, 1, "pdf"),
+    # CL-2021-1T
+    ("CL-2021-1T", "Credicorp Capital", "2021-11-22 (repite informes previos)", "USD/CLP", "otro", "Izquierda 850 / derecha 770 (vs ~840)", None, 0, "pdf"),
+    # CL-2021-2T
+    ("CL-2021-2T", "Scotiabank (J. Selaive)", "2021-12-17", "IPSA", "bueno", "Kast: IPSA ~5.000 (vs 4.392)", 13.8, 1, "pdf"),
+    ("CL-2021-2T", "Scotiabank (J. Selaive)", "2021-12-17", "IPSA", "malo", "Boric: IPSA ~4.000", -8.9, 1, "pdf"),
+    ("CL-2021-2T", "Scotiabank (J. Selaive)", "2021-12-17", "USD/CLP", "malo", "Boric: 880-890 (vs 847)", -4.5, 1, "pdf"),
+    ("CL-2021-2T", "Euroamérica", "2021-12-17", "IPSA", "malo", "Boric: IPSA a 3.900", -11.2, 1, "pdf"),
+    ("CL-2021-2T", "Euroamérica", "2021-12-17", "IPSA", "bueno", "Kast: IPSA a 4.900", 11.6, 1, "pdf"),
+    # CL-2022-PLEB
+    ("CL-2022-PLEB", "Credicorp Capital", "2022-09-01", "IPSA/USD-CLP", "otro", "Prima política de 100-150 pesos en el dólar; IPSA con descuento de 15-40%", None, 1, "pdf"),
+    ("CL-2022-PLEB", "XTB Latam", "2022-09-02", "USD/CLP", "malo", "Apruebo: dólar sobre 900 (vs 882,5)", -2.0, 1, "pdf"),
+    # CL-2023-PLEB
+    ("CL-2023-PLEB", "Fynsa", "2023-12-14", "IPSA", "bueno", "A favor: IPSA ~6.500 (vs ~6.096)", 6.6, 1, "pdf"),
+    ("CL-2023-PLEB", "Sura Investments", "2023-12-14", "IPSA", "malo", "En contra por poco: IPSA cae 'un par de puntos'", -2.0, 1, "pdf"),
+    # CL-2025-1T
+    ("CL-2025-1T-ROB", "Credicorp Capital", "2025-11-13", "IPSA", "otro", "Kaiser en 2ª vuelta: IPSA -5 a -10%", -7.5, 1, "pdf"),
+    ("CL-2025-1T-ROB", "Credicorp Capital", "2025-11-13", "IPSA", "otro", "Matthei en 2ª vuelta: IPSA hasta +5%", 5.0, 1, "pdf"),
+    ("CL-2025-1T-ROB", "Morgan Stanley", "2025-11-14", "acciones locales", "otro", "Giro populista sorpresa: ~-20%", -20.0, 1, "pdf"),
+    ("CL-2025-1T", "Credicorp Capital", "2025-11-13", "IPSA", "malo", "Kaiser en 2ª vuelta: IPSA -5 a -10%", -7.5, 1, "pdf"),
+    # CL-2025-2T
+    ("CL-2025-2T", "XTB Latam", "2025-12-12", "IPSA", "malo", "Jara: IPSA -3 a -5%, hasta -7%", -5.0, 1, "pdf"),
+    ("CL-2025-2T", "XTB Latam", "2025-12-12", "IPSA", "bueno", "Kast: IPSA +1 a +3%", 2.0, 1, "pdf"),
+    # CO-2018-2T
+    ("CO-2018-2T", "XP Securities (A. Bernal)", "2018-06-01", "USD/COP", "malo", "Petro: dólar sobre 3.000 (vs 2.860)", -4.7, 1, "pdf"),
+    ("CO-2018-2T", "XP Securities (A. Bernal)", "2018-06-01", "USD/COP", "bueno", "Duque: dólar bajo 2.700", 5.6, 1, "pdf"),
+    # CO-2022-1T
+    ("CO-2022-1T", "Barclays (vía MNI)", "pre 29/5", "COP", "bueno", "Petro vs Hernández: probablemente positivo para el COP", None, 1, "pdf"),
+    ("CO-2022-1T", "UBS (vía MNI)", "pre 29/5", "mercado", "malo", "Gutiérrez sobre Hernández: lectura inicial negativa", None, 1, "pdf"),
+    # CO-2022-2T
+    ("CO-2022-2T", "La República (nota de mercado)", "2022-06-17", "USD/COP", "malo", "Petro: reacción negativa, soporte en 4.105 (vs ~3.904)", -5.1, 1, "pdf"),
+    # CO-2026-1T
+    ("CO-2026-1T", "Itaú", "2026-05-25", "COLCAP", "bueno", "Opositor: COLCAP 2.400-2.500 (vs ~2.085)", 17.5, 1, "pdf"),
+    ("CO-2026-1T", "Itaú", "2026-05-25", "USD/COP", "malo", "Crisis: 4.600-4.800", -25.0, 1, "pdf"),
+    ("CO-2026-1T", "Aval Asset Management", "2026-05-29", "acciones", "malo", "Cepeda: acciones ~-21%; dólar hasta +23% en 30 días", -21.0, 1, "pdf"),
+    # CO-2026-2T
+    ("CO-2026-2T", "Encuesta Reuters (17 economistas)", "2026-06-05", "USD/COP", "bueno", "DLE: peso +2% (0 a +7%)", 2.0, 1, "pdf"),
+    ("CO-2026-2T", "Encuesta Reuters (17 economistas)", "2026-06-05", "USD/COP", "malo", "Cepeda: peso -7% (-4 a -15%)", -7.0, 1, "pdf"),
+    ("CO-2026-2T", "Aval Asset Management", "2026-06-19", "COLCAP", "bueno", "DLE: hasta +5% (2.500)", 5.0, 1, "pdf"),
+    ("CO-2026-2T", "Aval Asset Management", "2026-06-19", "COLCAP", "malo", "Cepeda: ~-10% (2.100 o menos)", -10.0, 1, "pdf"),
+    ("CO-2026-2T", "Credicorp Capital", "2026-06-19", "acciones", "malo", "Cepeda: ~-10% en el corto plazo", -10.0, 1, "pdf"),
+    # TR
+    ("TR-2015-06", "TSKB", "2015-06", "BIST-100", "malo", "Sin gobierno de partido único: BIST hasta 76.700 si pierde 82.400", -6.9, 1, "pdf"),
+    ("TR-2015-11", "Ancla: reacción de junio 2015", "2015-06-08", "BIST/lira", "malo", "Tras el parlamento sin mayoría de junio: lira ~-5%, BIST abre ~-8%", -8.0, 1, "pdf"),
+    ("TR-2023-2T", "Wells Fargo", "2023-05-15", "USD/TRY", "malo", "Erdoğan: venta fuerte de la lira, USD/TRY 23 a fin de junio (vs ~20)", -13.0, 1, "pdf"),
+    ("TR-2023-2T", "Wells Fargo", "2023-03-08", "USD/TRY", "bueno", "Kılıçdaroğlu: lira ~+20% a fin del 2T", 20.0, 1, "pdf"),
+    ("TR-2023-2T", "Analista local", "2023-05-15", "BIST-100", "malo", "Erdoğan: BIST en 4.300-4.400", None, 1, "pdf"),
+]
+
+# ==================================================================== ARGENTINA (fuera de muestra; solo ex ante con cifra o umbral)
+S += [
+    ("AR-2015-2T", "Citi", "2015-10-29", "bonos/holdouts", "bueno", "Macri gana: ganancia para holdouts; Citi 55% Macri", None, 1, "pdf"),
+    ("AR-2019-PASO", "Balanz Capital", "2019-08-09", "bonos USD", "malo", "Fernández gana por más de 7 pts: bonos -15%", -15.0, 1, "pdf"),
+    ("AR-2019-PASO", "Balanz Capital", "2019-08-09", "peso", "malo", "Fernández gana por más de 7 pts: peso -10%", -10.0, 1, "pdf"),
+    ("AR-2023-PASO", "PPI", "2023-07-12", "CCL (peso)", "malo", "Batacazo de Milei (5%): CCL 515 -> 762", -32.4, 1, "pdf"),
+    ("AR-2023-PASO", "PPI", "2023-07-12", "CCL (peso)", "otro", "Triunfo contundente de JxC (30%): CCL 515 -> 291-364", 55.0, 1, "pdf"),
+    ("AR-2023-1T", "Adcap", "2023-10-18", "peso oficial", "otro", "Precios descuentan ~70% de devaluación post-elección", None, 1, "pdf"),
+    ("AR-2023-1T", "Emso (P. Esteruelas)", "2023-10-18", "bonos USD", "malo", "Balotaje Massa-Milei 'the worst of all possible scenarios'; Bullrich-Massa favorable", None, 1, "si"),
+    ("AR-2023-2T", "PIN Capital", "n/d", "Merval USD", "otro", "Balotaje Milei-Massa: Merval podría superar US$1.800", None, 1, "pdf"),
+    ("AR-2023-2T", "Natalia Motyl", "2023-10-31", "peso oficial", "otro", "Milei: devaluación de 30%; Massa: crawling 10% mensual", None, 1, "pdf"),
+    ("AR-2023-2T", "Eco Go", "2023-10-31", "peso oficial", "otro", "Salto de ~50% el 21/11", -50.0, 1, "pdf"),
+    ("AR-2025-PBA", "JP Morgan", "2025-09-05", "peso oficial", "malo", "FP por más de 5: dólar al techo de la banda ($1.460)", None, 1, "pdf"),
+    ("AR-2025-PBA", "Daniel Osinaga", "2025-09-04", "Merval USD", "malo", "Ventaja kirchnerista ≥ 10: Merval US$1.400 -> 1.000", -28.6, 1, "pdf"),
+    ("AR-2025-PBA", "Romano Group", "2025-09-04", "riesgo país", "malo", "Brecha > 10: riesgo país a 900-1.000 pb", None, 1, "pdf"),
+    ("AR-2025-LEG", "Max Capital", "2025-10-24", "bonos USD", "bueno", "LLA mejor que lo que hay en precio: bonos ~+15%", 15.0, 1, "pdf"),
+    ("AR-2025-LEG", "Robeco (D. Deltcheva)", "2025-10-24", "bonos USD", "bueno", "Buen resultado de Milei: +3-5 puntos", 4.0, 1, "pdf"),
+    ("AR-2025-LEG", "Delphos", "2025-10-09", "Merval USD", "malo", "Mala elección: Merval a US$950", None, 1, "pdf"),
+    ("AR-2025-LEG", "Bull Market Brokers", "2025-10-26", "YPF/GGAL/PAM", "malo", "LLA < 33%: -10% a -15%", -12.5, 0, "pdf"),
+]

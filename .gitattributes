@@ -1,0 +1,2 @@
+# Keep every file byte-for-byte as committed (the SHA-256 hashes in README.md depend on it).
+* -text

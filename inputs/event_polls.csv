@@ -1,0 +1,329 @@
+event_id,encuestadora,campo,publicada,n,bueno,malo,base,modo,margen_bueno_pp,incluida,verificacion,nota
+BR-2014-1T,Datafolha,1-2 oct,2 oct,12022,24,27,validos,diferencia,-3.00,1,pdf,
+BR-2014-1T,Ibope,29 sep-1 oct,2 oct,3010,22,28,validos,diferencia,-6.00,1,pdf,
+BR-2014-1T,Sensus,n/d,3 oct,,20.6,22.5,totales,diferencia,-1.90,1,pdf,
+BR-2014-1T,CNT/MDA,fines sep,29 sep,2002,19.8,25.2,totales,diferencia,-5.40,1,pdf,
+BR-2014-1T,Datafolha,29-30 sep,30 sep,7520,20,25,totales,diferencia,-5.00,0,pdf,ola anterior de la misma encuestadora
+BR-2014-2T,Datafolha,22-23 oct,23 oct,9910,47,53,validos,dos_vias,-6.00,1,pdf,
+BR-2014-2T,Ibope,20-22 oct,22 oct,3010,46,54,validos,dos_vias,-8.00,1,pdf,
+BR-2014-2T,CNT/MDA,18-19 oct,~20 oct,,44.5,45.5,totales,dos_vias,-1.11,1,pdf,
+BR-2018-1T,Datafolha,3-4 oct,4 oct,10930,39,50,validos,umbral,-11.00,1,pdf,Bolsonaro % válidos vs 50
+BR-2018-2T,Datafolha,24-25 oct,25 oct,9173,56,44,validos,dos_vias,12.00,1,si,48/38 totales (IHU/El País)
+BR-2018-2T,Paraná Pesquisas,23-25 oct,~25 oct,2120,53,35,totales,dos_vias,20.45,1,pdf,
+BR-2018-2T,RealTime Big Data,24 oct,~25 oct,5000,49,38,totales,dos_vias,12.64,1,pdf,
+BR-2018-2T,XP/Ipespe,23-24 oct,~25 oct,2000,51,37,totales,dos_vias,15.91,1,pdf,
+BR-2018-2T,Ibope,21-23 oct,23 oct,3010,57,43,validos,dos_vias,14.00,1,si,50/37 totales (Monitor Mercantil)
+BR-2018-2T,CNT/MDA,20-21 oct,22 oct,2002,57,43,validos,dos_vias,14.00,1,pdf,
+BR-2018-2T,FSB/BTG Pactual,20-21 oct,22 oct,2000,60,40,validos,dos_vias,20.00,1,si,Mercopress
+BR-2022-1T,Datafolha,27-29 sep,29 sep,6800,50,50,validos,umbral,0.00,1,pdf,Lula % válidos
+BR-2022-1T,Exame/Ideia,23-28 sep,29 sep,1500,49,50,validos,umbral,1.00,1,pdf,
+BR-2022-1T,AtlasIntel,24-28 sep,30 sep,4500,50.7,50,validos,umbral,-0.70,1,pdf,
+BR-2022-1T,Genial/Quaest,24-27 sep,28 sep,2000,50.5,50,validos,umbral,-0.50,1,pdf,
+BR-2022-1T,PoderData,25-27 sep,28 sep,,48,50,validos,umbral,2.00,1,pdf,
+BR-2022-1T,Ipec,25-26 sep,26 sep,3008,52,50,validos,umbral,-2.00,1,pdf,
+BR-2022-1T,BTG/FSB,23-25 sep,26 sep,2000,48,50,validos,umbral,2.00,1,pdf,
+BR-2022-2T,Datafolha,25-27 oct,27 oct,4580,47,53,validos,dos_vias,-6.00,1,si,BP Money
+BR-2022-2T,ModalMais/Futura,24-26 oct,~26 oct,2000,50.3,49.7,validos,dos_vias,0.60,1,pdf,
+BR-2022-2T,PoderData,23-25 oct,26 oct,5000,47,53,validos,dos_vias,-6.00,1,si,BP Money
+BR-2022-2T,Genial/Quaest,23-25 oct,26 oct,2000,47,53,validos,dos_vias,-6.00,1,si,BP Money
+BR-2022-2T,Ipec,22-24 oct,24 oct,3008,46,54,validos,dos_vias,-8.00,1,si,BP Money
+BR-2022-2T,Abrapel/Ipespe,22-24 oct,25 oct,1100,47,53,validos,dos_vias,-6.00,1,si,BP Money
+BR-2022-2T,Paraná Pesquisas,20-24 oct,~25 oct,2020,49.8,50.2,validos,dos_vias,-0.40,1,si,Monitor Mercantil
+BR-2026-1T,Datafolha,29 sep-1 oct,1 oct,2506,40,45,validos,diferencia,-5.00,1,pdf,
+BR-2026-1T,Vox Brasil,29 sep-1 oct,~1 oct,2100,41.2,40.4,totales,diferencia,0.80,1,pdf,
+BR-2026-1T,Real Time Big Data,26-30 sep,~30 sep,2000,39,43,totales,diferencia,-4.00,1,pdf,
+BR-2026-1T,Futura,25-29 sep,~29 sep,2000,42.2,39.4,totales,diferencia,2.80,1,pdf,
+BR-2026-1T,AtlasIntel/Bloomberg,23-28 sep,29 sep,5005,42.2,45.3,totales,diferencia,-3.10,1,pdf,
+BR-2026-1T,Quaest,24-27 sep,28 sep,2004,34,39,totales,diferencia,-5.00,1,pdf,
+BR-2026-2T,Datafolha,20-22 oct,22 oct,2154,50,50,validos,dos_vias,0.00,1,si,Rio Times
+BR-2026-2T,PoderData/Aya,19-21 oct,22 oct,4000,51,49,validos,dos_vias,2.00,1,pdf,
+BR-2026-2T,Quaest,17-20 oct,21 oct,2154,50.56,49.44,validos,dos_vias,1.12,1,pdf,
+BR-2026-2T,AtlasIntel/Bloomberg,13-18 oct,19 oct,4998,51.1,48.9,validos,dos_vias,2.20,1,si,Rio Times
+BR-2026-2T,RealTime Big Data,19-22 oct,23 oct,2000,52,48,validos,dos_vias,4.00,1,pdf,
+BR-2026-2T,BTG/Nexus,16-18 oct,19 oct,2002,50.3,49.7,validos,dos_vias,0.60,1,si,Rio Times
+CL-2017-2T,Cadem,29 nov-1 dic,1-2 dic,1439,40.0,38.6,totales,dos_vias,1.78,1,pdf,último antes de la veda
+CL-2017-2T,Criteria,22-28 nov,30 nov,1595,47,45,totales,dos_vias,2.17,1,pdf,todos los encuestados (votantes probables: 51/46)
+CL-2017-2T,Cadem,22-24 nov,~26 nov,1442,39.8,37.3,totales,dos_vias,3.24,0,pdf,ola anterior
+CL-2021-1T,AtlasIntel,5-6 nov,~6 nov,,27.2,21.9,totales,diferencia,5.30,1,pdf,
+CL-2021-1T,Activa/Pulso Ciudadano,2-5 nov,~6 nov,2352,21.7,17.7,totales,diferencia,4.00,1,pdf,
+CL-2021-1T,Cadem,2-4 nov,~5 nov,1010,25,19,totales,diferencia,6.00,1,pdf,
+CL-2021-1T,Panel Ciudadano UDD,2-3 nov,~4 nov,,25,22,totales,diferencia,3.00,1,pdf,
+CL-2021-1T,Criteria,n/d,4 nov,,23,24,totales,diferencia,-1.00,1,pdf,
+CL-2021-1T,Data Influye,29-31 oct,~1 nov,1743,27,32,totales,diferencia,-5.00,1,pdf,
+CL-2021-2T,Cadem,15-16 dic,16 dic,,45,55,validos,dos_vias,-10.00,1,si,24horas
+CL-2021-2T,Panel Ciudadano UDD,15-16 dic,17 dic,,46,54,validos,dos_vias,-8.00,1,pdf,filtrada a Clarín
+CL-2021-2T,AtlasIntel,14-16 dic,16-17 dic,2218,48.5,48.4,totales,dos_vias,0.10,1,pdf,
+CL-2021-2T,Black & White,13-14 dic,15 dic,,50,50,validos,dos_vias,0.00,1,pdf,
+CL-2021-2T,La Cosa Nostra,27 nov-7 dic,14 dic,600,47.5,52.5,validos,dos_vias,-5.00,1,pdf,
+CL-2021-2T,Cadem (privada),9-10 dic,14 dic,1000,36,39,totales,dos_vias,-4.00,0,pdf,ola anterior de Cadem
+CL-2022-PLEB,Cadem,17-19 ago,19-20 ago,1007,46,37,totales,dos_vias,10.84,1,si,The Clinic / Mega
+CL-2022-PLEB,Activa/Pulso Ciudadano,16-19 ago,19 ago,2089,45.8,32.9,totales,dos_vias,16.39,1,si,Mega / La Tercera
+CL-2022-PLEB,AtlasIntel,16-19 ago,~20 ago,2735,54.8,39.0,totales,dos_vias,16.84,1,pdf,
+CL-2022-PLEB,Signos,14-19 ago,~20 ago,1095,46,43,totales,dos_vias,3.37,1,pdf,
+CL-2022-PLEB,Panel Ciudadano UDD,mediados ago,~20 ago,,47,37,totales,dos_vias,11.90,1,pdf,fila mezclada con Black & White en el PDF
+CL-2023-PLEB,Cadem,22-24 nov,26 nov,705,38,46,totales,dos_vias,-9.52,1,pdf,
+CL-2023-PLEB,Panel Ciudadano UDD,29-30 nov,~1 dic,7812,35,47,totales,dos_vias,-14.63,1,pdf,
+CL-2023-PLEB,Activa/Pulso Ciudadano,27-30 nov,~1 dic,1607,40.3,59.7,validos,dos_vias,-19.40,1,pdf,pronóstico propio en válidos
+CL-2023-PLEB,Data Influye,23-27 nov,~28 nov,1113,27,50,totales,dos_vias,-29.87,1,pdf,
+CL-2023-PLEB,Partner 305,olas,1 dic,12000,53.42,42.78,totales,dos_vias,11.06,1,pdf,difusión restringida
+CL-2025-1T-ROB,Panel Ciudadano UDD,30-31 oct,~1 nov,,21,26,totales,diferencia,-5.00,1,pdf,
+CL-2025-1T-ROB,Activa/Pulso Ciudadano,28-31 oct,1 nov,,19.9,29.3,validos,diferencia,-9.40,1,pdf,"Activa 16,9/24,9 en totales: misma encuesta"
+CL-2025-1T-ROB,Black & White,28-29 oct,~30 oct,,23,30,totales,diferencia,-7.00,1,pdf,
+CL-2025-1T-ROB,Criteria,27-29 oct,~30 oct,,23,27,totales,diferencia,-4.00,1,pdf,
+CL-2025-1T-ROB,Cadem,22-24 oct,~26 oct,,20,27,totales,diferencia,-7.00,1,pdf,
+CL-2025-1T,Panel Ciudadano UDD,30-31 oct,~1 nov,,21,14,totales,diferencia,7.00,1,pdf,Kast vs Kaiser
+CL-2025-1T,Activa/Pulso Ciudadano,28-31 oct,1 nov,,19.9,14.3,validos,diferencia,5.60,1,pdf,
+CL-2025-1T,Black & White,28-29 oct,~30 oct,,23,20,totales,diferencia,3.00,1,pdf,
+CL-2025-1T,Criteria,27-29 oct,~30 oct,,23,15,totales,diferencia,8.00,1,pdf,
+CL-2025-1T,Cadem,22-24 oct,~26 oct,,20,14,totales,diferencia,6.00,1,pdf,
+CL-2025-2T,Cadem,26-28 nov,~29 nov,,58,42,validos,dos_vias,16.00,1,si,Emol / Cadem
+CL-2025-2T,Activa/Pulso Ciudadano,n/d,29 nov,,45.2,31.6,totales,dos_vias,17.71,1,pdf,
+CL-2025-2T,Panel Ciudadano UDD,n/d,28 nov,,50,34,totales,dos_vias,19.05,1,pdf,
+CL-2025-2T,Criteria,n/d,27 nov,,51,35,totales,dos_vias,18.60,1,si,Ex-Ante: 59/41 en válidos
+CL-2025-2T,Data Influye,22-27 nov,~28 nov,,49,34,totales,dos_vias,18.07,1,pdf,
+CL-2025-2T,AtlasIntel,22-26 nov,~27 nov,,56.9,35,totales,dos_vias,23.83,1,pdf,
+CL-2025-2T,Black & White,n/d,28 nov,,53,37,totales,dos_vias,17.78,1,si,Emol 29/11; no estaba en el PDF
+CO-2018-2T,Guarumo-EcoAnalítica,2-6 jun,10 jun,3955,52.5,36.0,totales,dos_vias,18.64,1,pdf,
+CO-2018-2T,CNC,n/d,9 jun,1591,51,38,totales,dos_vias,14.61,1,pdf,
+CO-2018-2T,Cifras & Conceptos,n/d,8 jun,1983,45.3,36.4,totales,dos_vias,10.89,1,pdf,
+CO-2018-2T,Datexco,3-6 jun,~7 jun,1993,46.2,40.2,totales,dos_vias,6.94,1,pdf,
+CO-2018-2T,Invamer,2-5 jun,~6 jun,1200,57.2,37.3,totales,dos_vias,21.06,1,pdf,
+CO-2018-2T,YanHaas,31 may-4 jun,~5 jun,1251,52,34,totales,dos_vias,20.93,1,pdf,
+CO-2022-1T,AtlasIntel,17-20 may,~20 may,2781,21.4,26.7,totales,diferencia,-5.30,1,pdf,
+CO-2022-1T,CELAG,16-20 may,~21 may,2174,20.4,20.1,totales,diferencia,0.30,1,pdf,
+CO-2022-1T,Guarumo,16-19 may,~20 may,2258,20.3,30.8,totales,diferencia,-10.50,1,pdf,
+CO-2022-1T,CNC/Semana,13-19 may,~21 may,3860,21.9,23.9,totales,diferencia,-2.00,1,pdf,"muestra 41/23,9/21,9"
+CO-2022-1T,Invamer,13-18 may,~20 may,1312,20.9,27.1,totales,diferencia,-6.20,1,pdf,
+CO-2022-1T,Mosqueteros,15-18 may,~20 may,6000,15.8,22.4,totales,diferencia,-6.60,1,pdf,
+CO-2022-2T,AtlasIntel,8-11 jun,~11 jun,4467,50.2,47.5,totales,dos_vias,2.76,1,pdf,
+CO-2022-2T,YanHaas,5-10 jun,~11 jun,1234,35,45,totales,dos_vias,-12.50,1,pdf,
+CO-2022-2T,GAD3 (tracking),30 may-10 jun,~11 jun,5236,47.9,47.1,totales,dos_vias,0.84,1,pdf,
+CO-2022-2T,Guarumo/EcoAnalítica,6-9 jun,11 jun,2029,48.2,46.5,totales,dos_vias,1.80,1,pdf,
+CO-2022-2T,Mosqueteros,7-8 jun,~10 jun,6000,44.68,43.83,totales,dos_vias,0.96,1,pdf,
+CO-2022-2T,Invamer,3-7 jun,10 jun,1329,48.2,47.2,totales,dos_vias,1.05,1,pdf,
+CO-2022-2T,CNC,31 may-2 jun,~3 jun,,41,44.9,totales,dos_vias,-4.54,1,pdf,
+CO-2026-1T-ROB,CNC/Cambio,16-22 may,~23 may,2202,30.9,33.4,totales,diferencia,-2.50,1,pdf,
+CO-2026-1T-ROB,AtlasIntel/Semana,18-21 may,~22 may,4531,37.3,38.7,totales,diferencia,-1.40,1,pdf,"Reuters 38,7/37,3"
+CO-2026-1T-ROB,Invamer/Caracol,13-20 may,21 may,2224,31.6,44.6,totales,diferencia,-13.00,1,pdf,
+CO-2026-1T-ROB,Guarumo-EcoAnalítica,11-19 may,21 may,3787,27.5,37.1,totales,diferencia,-9.60,1,si,El Colombiano
+CO-2026-1T-ROB,CB Global Data,15-20 may,~22 may,2503,35.3,36.8,totales,diferencia,-1.50,1,pdf,
+CO-2026-1T-ROB,Miguel Maldonado Manjarrez,19-22 may,~23 may,5167,19.3,37.3,totales,diferencia,-18.00,1,pdf,
+CO-2026-1T,CNC/Cambio,16-22 may,~23 may,2202,33.4,50,totales,umbral,16.60,1,pdf,Cepeda %
+CO-2026-1T,AtlasIntel/Semana,18-21 may,~22 may,4531,38.7,50,validos,umbral,11.30,1,pdf,"Reuters 38,7 (probablemente válidos)"
+CO-2026-1T,Invamer/Caracol,13-20 may,21 may,2224,44.6,50,totales,umbral,5.40,1,pdf,
+CO-2026-1T,Guarumo-EcoAnalítica,11-19 may,21 may,3787,37.1,50,totales,umbral,12.90,1,si,El Colombiano
+CO-2026-1T,CB Global Data,15-20 may,~22 may,2503,36.8,50,totales,umbral,13.20,1,pdf,
+CO-2026-1T,Miguel Maldonado Manjarrez,19-22 may,~23 may,5167,37.3,50,totales,umbral,12.70,1,pdf,
+CO-2026-2T,CB Global Data,13-17 jun,18 jun,,50.1,45.1,totales,dos_vias,5.25,1,pdf,publicada durante la veda
+CO-2026-2T,Celag Data,n/d,14 jun,,39.7,40.8,totales,dos_vias,-1.37,1,pdf,
+CO-2026-2T,CNC/Cambio,6-13 jun,13 jun,2186,48.6,44.7,totales,dos_vias,4.18,1,pdf,
+CO-2026-2T,AtlasIntel/Semana,9-11 jun,13 jun,2992,52.4,44.4,validos,dos_vias,8.26,1,pdf,
+CO-2026-2T,Guarumo-EcoAnalítica,8-12 jun,13 jun,2073,52.6,45.0,totales,dos_vias,7.79,1,si,"Portafolio publica 53,6/45"
+CO-2026-2T,AtlasIntel/Semana,5-10 jun,10 jun,3681,52.6,44.8,validos,dos_vias,8.01,0,si,ola anterior (El Colombiano)
+TR-2015-06,Gezici,2 jun,~3 jun,4860,12.5,10,validos,umbral,-2.50,1,pdf,HDP %
+TR-2015-06,ORC,30 may-1 jun,~2 jun,3850,9.0,10,validos,umbral,1.00,1,pdf,
+TR-2015-06,Konda,30-31 may,~1 jun,3543,12.6,10,validos,umbral,-2.60,1,pdf,
+TR-2015-06,ANAR,27 may,~28 may,,11.0,10,validos,umbral,-1.00,1,pdf,
+TR-2015-06,MAK,18-26 may,~27 may,2155,9.9,10,validos,umbral,0.10,1,pdf,
+TR-2015-06,SONAR,25 may,~26 may,3000,10.4,10,validos,umbral,-0.40,1,pdf,
+TR-2015-11,Andy-Ar,24-29 oct,~29 oct,2400,43.7,47,validos,umbral,-3.30,1,pdf,AKP %
+TR-2015-11,Konda,24-25 oct,~27 oct,3574,41.7,47,validos,umbral,-5.30,1,pdf,
+TR-2015-11,A&G,24-25 oct,~27 oct,4536,47.2,47,validos,umbral,0.20,1,pdf,
+TR-2015-11,Gezici,24-25 oct,~27 oct,4864,43.0,47,validos,umbral,-4.00,1,pdf,
+TR-2015-11,MetroPoll,22-24 oct,~26 oct,2576,43.3,47,validos,umbral,-3.70,1,pdf,
+TR-2015-11,ORC,21-24 oct,~26 oct,2650,43.3,47,validos,umbral,-3.70,1,pdf,
+TR-2023-2T,İEA,25-26 may,¿26 may?,,48.1,51.9,dos_vias,dos_vias,-3.80,1,pdf,publicación posiblemente posterior al corte
+TR-2023-2T,BETİMAR,25-26 may,¿26 may?,6601,47.8,52.2,dos_vias,dos_vias,-4.40,1,pdf,idem
+TR-2023-2T,Özdemir,25-26 may,¿26 may?,3250,46.06,53.94,dos_vias,dos_vias,-7.88,1,pdf,idem
+TR-2023-2T,ALF,25-26 may,¿26 may?,2500,50.3,49.7,dos_vias,dos_vias,0.60,1,pdf,idem
+TR-2023-2T,SER-AR,25-26 may,¿26 may?,2200,51.3,48.7,dos_vias,dos_vias,2.60,1,pdf,idem
+TR-2023-2T,ORC,24-25 may,~25 may,3950,50.8,49.2,dos_vias,dos_vias,1.60,1,pdf,
+TR-2023-2T,Area,24-25 may,~25 may,2026,50.6,49.4,dos_vias,dos_vias,1.20,1,pdf,
+TR-2023-2T,KONDA,20-21 may,~22 may,3607,47.3,52.7,dos_vias,dos_vias,-5.40,1,pdf,
+TR-2023-2T,Areda,20-21 may,~22 may,10491,47.6,52.4,dos_vias,dos_vias,-4.80,1,pdf,
+AR-2015-1T,Ricardo Rouvier,21/10,,,10.9,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-0.90,1,pdf,citado por terceros (PDF)
+AR-2015-1T,CEOP,"últimos 5 días, pub. 19/10",,,11.6,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-1.60,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Ipsos-Mora y Araujo,pub. 19/10,,,14.0,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-4.00,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Giacobbe,17/10,,,11.6,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-1.60,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Circuitos,16/10,,,12.2,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-2.20,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Dicen,7-10/10,,,15.1,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-5.10,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Poliarquía,2-7/10,,,10.9,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-0.90,1,pdf,citado por terceros (PDF)
+AR-2015-1T,González y Valladares,06/10,,,10.1,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-0.10,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Julio Aurelio,05/10,,,11.0,10.0,ventaja Scioli-Macri vs umbral 10,umbral,-1.00,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Elypsis,21/9-4/10,,,8.5,10.0,ventaja Scioli-Macri vs umbral 10,umbral,1.50,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Polldata,28/9-2/10,,,9.7,10.0,ventaja Scioli-Macri vs umbral 10,umbral,0.30,1,pdf,citado por terceros (PDF)
+AR-2015-1T,Raúl Aragón,,,,0.0,10.0,-,umbral,10.00,0,pdf,excluida: sin cifra de Macri
+AR-2015-1T,OPSM,,,,0.0,10.0,-,umbral,10.00,0,pdf,excluida: sin cifra de Macri
+AR-2015-1T,Management & Fit,,,,0.0,10.0,-,umbral,10.00,0,pdf,excluida: sin cifra de Macri
+AR-2015-2T,González y Valladares,19/11,,,56.1,43.6,no indicado,dos_vias,12.54,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Elypsis,,18/11,,54.4,45.6,proyectado,dos_vias,8.80,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Quorus,10-16/11,,,47.02,45.98,no indicado,dos_vias,1.12,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Univ. Nacional de San Martín,14/11,,,42.55,45.55,no indicado,dos_vias,-3.41,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Giacobbe,31/10-13/11,,,49.0,42.1,no indicado,dos_vias,7.57,1,pdf,"citado por terceros (PDF); otra entrada 53,8/46,2 (misma proporción)"
+AR-2015-2T,Management & Fit,9-12/11,,,52.0,43.7,no indicado,dos_vias,8.67,1,pdf,citado por terceros (PDF)
+AR-2015-2T,FUNDITRA,10-11/11,,,43.56,41.79,no indicado,dos_vias,2.07,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Hugo Haime,,11/11,,52.85,47.15,"ventaja proyectada 5,7",dos_vias,5.70,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Raúl Aragón,10/11,,,54.0,46.0,no indicado,dos_vias,8.00,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Poliarquía,9-10/11,,,48.7,40.2,no indicado,dos_vias,9.56,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Ipsos,31/10-1/11,,,51.2,39.9,no indicado,dos_vias,12.40,1,pdf,citado por terceros (PDF)
+AR-2015-2T,Polldata,28-30/10,,,50.3,39.7,no indicado,dos_vias,11.78,1,pdf,citado por terceros (PDF)
+AR-2017-LEG,Encuestas citadas por A. Collante (no identificadas),,17/10,,2.5,0.0,ventaja 'dos o tres',diferencia,2.50,1,pdf,citado por terceros (PDF)
+AR-2017-LEG,Consultora anónima,,23/09,,42.8,33.7,no indicado,diferencia,9.10,1,pdf,citado por terceros (PDF)
+AR-2017-LEG,Firma no identificada,,13/09,,4.0,0.0,ventaja 4,diferencia,4.00,1,pdf,citado por terceros (PDF)
+AR-2017-LEG,Taquion,,desconocida,,0.0,1.6,"ventaja CFK 1,6",diferencia,-1.60,0,pdf,excluida: fecha desconocida
+AR-2019-PASO,Federico González,,02/08,,7.7,7.0,ventaja Fernández-Macri vs umbral 7,umbral,-0.70,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Federico González,,02/08,,36.8,44.5,no indicado,diferencia,-7.70,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Dicen,,02/08,,5.6,7.0,ventaja Fernández-Macri vs umbral 7,umbral,1.40,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Dicen,,02/08,,38.1,43.7,no indicado,diferencia,-5.60,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Management & Fit,2/08,,,2.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,5.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Management & Fit,2/08,,,39.2,41.2,no indicado,diferencia,-2.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,CELAG,,02/08,,9.1,7.0,ventaja Fernández-Macri vs umbral 7,umbral,-2.10,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,CELAG,,02/08,,33.4,42.5,no indicado,diferencia,-9.10,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Raúl Aragón,2/08,,,5.5,7.0,ventaja Fernández-Macri vs umbral 7,umbral,1.50,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Raúl Aragón,2/08,,,36.1,41.6,no indicado,diferencia,-5.50,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Ricardo Rouvier,2/08,,,5.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,2.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Ricardo Rouvier,2/08,,,34.0,39.0,no indicado,diferencia,-5.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Gustavo Córdoba,2/08,,,4.1,7.0,ventaja Fernández-Macri vs umbral 7,umbral,2.90,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Gustavo Córdoba,2/08,,,34.1,38.2,no indicado,diferencia,-4.10,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Opina Argentina,2/08,,,4.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,3.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Opina Argentina,2/08,,,35.0,39.0,no indicado,diferencia,-4.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Trespuntozero,2/08,,,7.6,7.0,ventaja Fernández-Macri vs umbral 7,umbral,-0.60,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Trespuntozero,2/08,,,36.0,43.6,no indicado,diferencia,-7.60,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Ideia Big Data,2/08,,,-3.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,10.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Ideia Big Data,2/08,,,40.0,37.0,no indicado,diferencia,3.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Oh! Panel,,02/08,,6.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,1.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Oh! Panel,,02/08,,35.0,41.0,no indicado,diferencia,-6.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Marketing y Estadística,,02/08,,4.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,3.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Marketing y Estadística,,02/08,,37.0,41.0,no indicado,diferencia,-4.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Real Time Data,31/07,,,1.0,7.0,ventaja Fernández-Macri vs umbral 7,umbral,6.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Real Time Data,31/07,,,38.0,39.0,no indicado,diferencia,-1.00,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,CIGP,26-31/07,,,0.52,7.0,ventaja Fernández-Macri vs umbral 7,umbral,6.48,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,CIGP,26-31/07,,,39.56,40.08,no indicado,diferencia,-0.52,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Circuitos,24-29/07,,,4.9,7.0,ventaja Fernández-Macri vs umbral 7,umbral,2.10,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Circuitos,24-29/07,,,34.7,39.6,no indicado,diferencia,-4.90,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Reale Dallatorre,26-28/07,,,1.7,7.0,ventaja Fernández-Macri vs umbral 7,umbral,5.30,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Reale Dallatorre,26-28/07,,,35.9,37.6,no indicado,diferencia,-1.70,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Giacobbe,27-28/07,,,1.5,7.0,ventaja Fernández-Macri vs umbral 7,umbral,5.50,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Giacobbe,27-28/07,,,38.5,40.0,no indicado,diferencia,-1.50,1,pdf,citado por terceros (PDF)
+AR-2019-PASO,Tendencias,23/07,,,5.8,7.0,ventaja Fernández-Macri vs umbral 7,umbral,1.20,1,pdf,citado por terceros (PDF)
+AR-2019-PASO-ROB,Tendencias,23/07,,,32.7,38.5,no indicado,diferencia,-5.80,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Trespuntozero,,19/10,,52.5,45.0,Fernández vs umbral 45,umbral,-7.50,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Clivajes,,19/10,,53.7,45.0,Fernández vs umbral 45,umbral,-8.70,1,pdf,citado por terceros (PDF)
+AR-2019-1T,CIGP,,19/10,,51.37,45.0,Fernández vs umbral 45,umbral,-6.37,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Federico González,,19/10,,54.0,45.0,Fernández vs umbral 45,umbral,-9.00,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Giacobbe,,18/10,,51.0,45.0,Fernández vs umbral 45,umbral,-6.00,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Ricardo Rouvier,,18/10,,52.3,45.0,Fernández vs umbral 45,umbral,-7.30,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Proyección,,18/10,,53.8,45.0,Fernández vs umbral 45,umbral,-8.80,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Circuitos,,18/10,,53.6,45.0,Fernández vs umbral 45,umbral,-8.60,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Opina Argentina,,~18/10,,52.0,45.0,Fernández vs umbral 45,umbral,-7.00,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Gustavo Córdoba,,13/10,,52.2,45.0,Fernández vs umbral 45,umbral,-7.20,1,pdf,citado por terceros (PDF)
+AR-2019-1T,Universidad de San Andrés,1-10/10,17/10,,nan,45.0,-,umbral,,0,pdf,"excluida: solo rango de ventaja (8-17), sin participación"
+AR-2021-PASO,Raúl Aragón,1-3/9,,,32.6,33.4,no indicado,diferencia,-0.80,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Tendencias,30/8-2/9,,,34.3,33.4,no indicado,diferencia,0.90,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Federico González,29-31/8,,,30.2,31.2,no indicado,diferencia,-1.00,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Clivajes,23-31/8,,,34.1,39.1,no indicado,diferencia,-5.00,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Trespuntozero,27-31/8,,,33.2,32.4,no indicado,diferencia,0.80,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,CIGP,25-31/8,,,32.9,33.3,no indicado,diferencia,-0.40,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,CB Consultora,27-29/8,,,32.1,31.1,no indicado,diferencia,1.00,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Giacobbe,27-29/8,,,37.3,31.2,no indicado,diferencia,6.10,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Circuitos,24-28/8,,,26.7,33.5,no indicado,diferencia,-6.80,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Observatorio Electoral,20-23/8,,,44,35.0,no indicado,diferencia,9.00,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,OPSA,12-16/8,,,25.8,25.7,no indicado,diferencia,0.10,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,CEOP,15/8,,,30.2,38.4,no indicado,diferencia,-8.20,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Ricardo Rouvier,23/7-4/8,,,28.2,38.3,no indicado,diferencia,-10.10,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Management & Fit,26/7-2/8,,,33.4,38.4,no indicado,diferencia,-5.00,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,UNLAM,25-28/7,,,30.3,34.1,no indicado,diferencia,-3.80,1,pdf,citado por terceros (PDF)
+AR-2021-PASO,Opinaia,19-27/8,,,29.0,16.0,no indicado,diferencia,13.00,0,pdf,"excluida: Paz 16% con 22% de indecisos, fuera de rango"
+AR-2021-LEG,Circuitos,1-2/11,,,39.8,35.7,no indicado,diferencia,4.10,1,pdf,citado por terceros (PDF)
+AR-2021-LEG,Opina Argentina,30-31/10,,,36.0,32.0,no indicado,diferencia,4.00,1,pdf,citado por terceros (PDF)
+AR-2021-LEG,Políticos en Redes,26-28/10,,,39.7,36.3,no indicado,diferencia,3.40,1,pdf,citado por terceros (PDF)
+AR-2021-LEG,CIGP,21-25/10,,,40.7,34.3,no indicado,diferencia,6.40,1,pdf,citado por terceros (PDF)
+AR-2021-LEG,Trespuntozero,10-19/10,,,37.8,34.0,no indicado,diferencia,3.80,1,pdf,citado por terceros (PDF)
+AR-2021-LEG,Raúl Aragón,14-16/10,,,39.4,37.1,no indicado,diferencia,2.30,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Opina Argentina,,04/08,,32,20,no indicado,diferencia,12.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Opina Argentina,,04/08,,1,5.0,ventaja JxC-UxP vs umbral 5,umbral,-4.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Federico González,,03/08,,36.4,19.5,no indicado,diferencia,16.90,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Federico González,,03/08,,6.3,5.0,ventaja JxC-UxP vs umbral 5,umbral,1.30,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Univ. de San Andrés,,01/08,,28,15,no indicado,diferencia,13.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Univ. de San Andrés,,01/08,,7,5.0,ventaja JxC-UxP vs umbral 5,umbral,2.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Inteligencia Analítica,,01/08,,34.3,19.6,no indicado,diferencia,14.70,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Inteligencia Analítica,,01/08,,4.5,5.0,ventaja JxC-UxP vs umbral 5,umbral,-0.50,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Analogías,,01/08,,32.7,17.8,no indicado,diferencia,14.90,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Analogías,,01/08,,0.4,5.0,ventaja JxC-UxP vs umbral 5,umbral,-4.60,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Clivajes,,01/08,,33.9,18.4,no indicado,diferencia,15.50,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Clivajes,,01/08,,3.4,5.0,ventaja JxC-UxP vs umbral 5,umbral,-1.60,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Observatorio Electoral,,01/08,,40,15,no indicado,diferencia,25.00,1,pdf,citado por terceros (PDF); UxP = JxC - 12
+AR-2023-PASO-ROB,Observatorio Electoral,,01/08,,12,5.0,ventaja JxC-UxP vs umbral 5,umbral,7.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,CB Consultora,,01/08,,33,20,no indicado,diferencia,13.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,CB Consultora,,01/08,,3,5.0,ventaja JxC-UxP vs umbral 5,umbral,-2.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Circuitos,,01/08,,34,16,no indicado,diferencia,18.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Circuitos,,01/08,,4,5.0,ventaja JxC-UxP vs umbral 5,umbral,-1.00,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Zuban Córdoba,,01/08,,33,24.5,no indicado,diferencia,8.50,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Zuban Córdoba,,01/08,,5.9,5.0,ventaja JxC-UxP vs umbral 5,umbral,0.90,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,Giacobbe,,31/07,,38,18.8,no indicado,diferencia,19.20,1,pdf,citado por terceros (PDF)
+AR-2023-PASO-ROB,Giacobbe,,31/07,,5.8,5.0,ventaja JxC-UxP vs umbral 5,umbral,0.80,1,pdf,citado por terceros (PDF)
+AR-2023-PASO,AtlasIntel,,día previo a la elección,,32.6,24.5,no indicado,diferencia,8.10,0,pdf,excluida: publicada después del corte (vie 11/8)
+AR-2023-1T,AtlasIntel,10-13/10,,,24.4,26.5,Bullrich vs menor de Massa/Milei,diferencia,-2.10,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,AtlasIntel,10-13/10,,,30.9,45.0,mayor de Massa/Milei vs umbral 45,umbral,14.10,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Tendencias,9-12/10,,,23.1,29.8,Bullrich vs menor de Massa/Milei,diferencia,-6.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Tendencias,9-12/10,,,30.2,45.0,mayor de Massa/Milei vs umbral 45,umbral,14.80,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Circuitos,9-11/10,,,24.4,32.3,Bullrich vs menor de Massa/Milei,diferencia,-7.90,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Circuitos,9-11/10,,,34.1,45.0,mayor de Massa/Milei vs umbral 45,umbral,10.90,1,pdf,citado por terceros (PDF)
+AR-2023-1T,CB Consultora,9-11/10,,,21.8,29.1,Bullrich vs menor de Massa/Milei,diferencia,-7.30,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,CB Consultora,9-11/10,,,29.9,45.0,mayor de Massa/Milei vs umbral 45,umbral,15.10,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Clivajes,9-11/10,,,26.8,31.4,Bullrich vs menor de Massa/Milei,diferencia,-4.60,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Clivajes,9-11/10,,,33.1,45.0,mayor de Massa/Milei vs umbral 45,umbral,11.90,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Opinaia,2-11/10,,,22.0,29.0,Bullrich vs menor de Massa/Milei,diferencia,-7.00,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Opinaia,2-11/10,,,32.0,45.0,mayor de Massa/Milei vs umbral 45,umbral,13.00,1,pdf,citado por terceros (PDF)
+AR-2023-1T,DC Consultores,7-10/10,,,28.9,26.2,Bullrich vs menor de Massa/Milei,diferencia,2.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,DC Consultores,7-10/10,,,35.6,45.0,mayor de Massa/Milei vs umbral 45,umbral,9.40,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Proyección,3-9/10,,,23.2,30.9,Bullrich vs menor de Massa/Milei,diferencia,-7.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Proyección,3-9/10,,,35.5,45.0,mayor de Massa/Milei vs umbral 45,umbral,9.50,1,pdf,citado por terceros (PDF)
+AR-2023-1T,CIGP,5-8/10,,,20.9,27.2,Bullrich vs menor de Massa/Milei,diferencia,-6.30,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,CIGP,5-8/10,,,28.1,45.0,mayor de Massa/Milei vs umbral 45,umbral,16.90,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Giacobbe,30/9-7/10,,,27.3,28.5,Bullrich vs menor de Massa/Milei,diferencia,-1.20,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Giacobbe,30/9-7/10,,,32.9,45.0,mayor de Massa/Milei vs umbral 45,umbral,12.10,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Fixer,2-5/10,,,25.4,26.1,Bullrich vs menor de Massa/Milei,diferencia,-0.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Fixer,2-5/10,,,34.3,45.0,mayor de Massa/Milei vs umbral 45,umbral,10.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Zuban Córdoba,3-4/10,,,25.0,32.7,Bullrich vs menor de Massa/Milei,diferencia,-7.70,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Zuban Córdoba,3-4/10,,,34.7,45.0,mayor de Massa/Milei vs umbral 45,umbral,10.30,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Reale Dalla Torre,28/9-3/10,,,21.8,24.7,Bullrich vs menor de Massa/Milei,diferencia,-2.90,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Reale Dalla Torre,28/9-3/10,,,36.2,45.0,mayor de Massa/Milei vs umbral 45,umbral,8.80,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Aresco,21-29/9,,,25.9,32.1,Bullrich vs menor de Massa/Milei,diferencia,-6.20,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Aresco,21-29/9,,,35.0,45.0,mayor de Massa/Milei vs umbral 45,umbral,10.00,1,pdf,citado por terceros (PDF)
+AR-2023-1T,Univ. de San Andrés,14-25/9,,,26.4,29.8,Bullrich vs menor de Massa/Milei,diferencia,-3.40,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,Univ. de San Andrés,14-25/9,,,34.7,45.0,mayor de Massa/Milei vs umbral 45,umbral,10.30,1,pdf,citado por terceros (PDF)
+AR-2023-1T,CELAG,1-20/9,,,28.1,32.2,Bullrich vs menor de Massa/Milei,diferencia,-4.10,1,pdf,citado por terceros (PDF)
+AR-2023-1T-ROB,CELAG,1-20/9,,,33.2,45.0,mayor de Massa/Milei vs umbral 45,umbral,11.80,1,pdf,citado por terceros (PDF)
+AR-2023-2T,AtlasIntel,5-9/11,,,48.6,44.6,no indicado,dos_vias,4.29,1,pdf,citado por terceros (PDF)
+AR-2023-2T,CELAG,25/10-8/11,,,49.2,50.8,proyectado,dos_vias,-1.60,1,pdf,citado por terceros (PDF)
+AR-2023-2T,CB Consultora,1-6/11,,,46.3,43.1,no indicado,dos_vias,3.58,1,pdf,citado por terceros (PDF)
+AR-2023-2T,Proyección,1-6/11,07/11,3879,44.6,42.9,no indicado,dos_vias,1.94,1,pdf,citado por terceros (PDF)
+AR-2023-2T,CIGP,,06/11,,49.6,47.0,validos proyectados,dos_vias,2.69,1,pdf,citado por terceros (PDF)
+AR-2023-2T,Analogías,,06/11,,34.3,42.4,no indicado,dos_vias,-10.56,1,pdf,citado por terceros (PDF)
+AR-2023-2T,Zuban Córdoba,,06/11,,43.1,45.4,no indicado,dos_vias,-2.60,1,pdf,citado por terceros (PDF)
+AR-2023-2T,Inteligencia Analítica,,06/11,,43.3,43.1,no indicado,dos_vias,0.23,1,pdf,citado por terceros (PDF)
+AR-2023-2T,Aresco,25-27/10,04/11,6000,52.4,47.6,proyectado,dos_vias,4.80,1,pdf,citado por terceros (PDF)
+AR-2023-2T,CB/Proyección y Clivajes/Zuban (LatinFinance),,16/11,,nan,nan,-,dos_vias,,0,pdf,"excluida: solo dirección (Milei +2-3 / Massa estrecho), sin cifras"
+AR-2025-PBA,Aresco,pub. 02/09,,,2.2,5.0,ventaja FP-LLA vs umbral 5,umbral,2.80,1,pdf,citado por terceros (PDF)
+AR-2025-PBA-ROB,Aresco,pub. 02/09,,,2.2,10.0,ventaja FP-LLA vs umbral 10,umbral,7.80,1,pdf,citado por terceros (PDF)
+AR-2025-PBA,Proyección,24/7-5/8,,,0.8,5.0,ventaja FP-LLA vs umbral 5,umbral,4.20,1,pdf,citado por terceros (PDF)
+AR-2025-PBA-ROB,Proyección,24/7-5/8,,,0.8,10.0,ventaja FP-LLA vs umbral 10,umbral,9.20,1,pdf,citado por terceros (PDF)
+AR-2025-PBA,Giacobbe,23-28/7,,,-2.1,5.0,ventaja FP-LLA vs umbral 5,umbral,7.10,1,pdf,citado por terceros (PDF)
+AR-2025-PBA-ROB,Giacobbe,23-28/7,,,-2.1,10.0,ventaja FP-LLA vs umbral 10,umbral,12.10,1,pdf,citado por terceros (PDF)
+AR-2025-PBA,Analogías,pub. 20/07,,,1.9,5.0,ventaja FP-LLA vs umbral 5,umbral,3.10,1,pdf,citado por terceros (PDF)
+AR-2025-PBA-ROB,Analogías,pub. 20/07,,,1.9,10.0,ventaja FP-LLA vs umbral 10,umbral,8.10,1,pdf,citado por terceros (PDF)
+AR-2025-PBA,Rubikon,n/d,,,-1.3,5.0,ventaja FP-LLA vs umbral 5,umbral,6.30,1,pdf,citado por terceros (PDF)
+AR-2025-PBA-ROB,Rubikon,n/d,,,-1.3,10.0,ventaja FP-LLA vs umbral 10,umbral,11.30,1,pdf,citado por terceros (PDF)
+AR-2025-PBA,Nueva Comunicación,,,,0.0,5.0,-,umbral,5.00,0,pdf,excluida: el PDF no trae las etiquetas de partido
+AR-2025-PBA,CB Consultora,,,,0.0,5.0,-,umbral,5.00,0,pdf,excluida: el PDF no trae las etiquetas de partido
+AR-2025-PBA,Tendencias,,,,0.0,5.0,-,umbral,5.00,0,pdf,excluida: el PDF no trae las etiquetas de partido
+AR-2025-PBA,Pulso Research,,,,0.0,5.0,-,umbral,5.00,0,pdf,excluida: el PDF no trae las etiquetas de partido
+AR-2025-LEG,Trespuntozero / La Sastrería,,18/10,,40.0,35.0,no indicado,umbral,5.00,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,CB Consultora,11-15/10,23/10,,40.8,35.0,"proyectado (37,1 crudo)",umbral,5.80,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,Proyección,8-14/10,16/10,,36.4,35.0,no indicado,umbral,1.40,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,Management & Fit,15-25/9,20/10,,39.6,35.0,no indicado,umbral,4.60,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,Univ. de San Andrés (ESPOP),15-24/9,20/10,,31.0,35.0,totales (incluye blanco y no votaría),umbral,-4.00,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,Trends,8-17/9,18/10,,42.0,35.0,no indicado,umbral,7.00,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,Reale Dallatorre (RDT),10-15/9,18/10,,35.0,35.0,no indicado,umbral,0.00,1,pdf,citado por terceros (PDF)
+AR-2025-LEG,AtlasIntel / Bloomberg,10-14/9,,,39.8,35.0,no indicado,umbral,4.80,1,pdf,citado por terceros (PDF)

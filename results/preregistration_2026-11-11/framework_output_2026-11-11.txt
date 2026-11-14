@@ -1,0 +1,231 @@
+REGLA PRINCIPAL: recargo 25%, severidad promedio, no topear la suba si u > |d|, caja <= 0,25%
+
+==============================================================================================================
+Brasil 2022 · 2T (bueno = Bolsonaro) · BOVA11  (víspera 2022-10-28, marcado 2022-10-31)
+==============================================================================================================
+Spot 110.63 (paridad; último 113.00) | IV 2022-11-18 39.6% | IV 2022-12-16 30.8% | vol base 23.5% (IV 2022-10-21 medida 2022-10-18; RV20 29.5%) | salto implícito (1 sd) 7.9%
+Opciones del vencimiento del evento: 73 cotizadas; líquidas OTM 0,7-1,3 S0: 15 puts, 10 calls
+P(bueno): encuestas 13%, 30% | fuentes 30%, 34%, 37%, 30%, 32%, 32%, 27%, 31%, 35%, 34%, 40% | grilla [0.128, 0.32, 0.4]
+Severidad primaria: term structure
+   p=0.128: u +20.7%, d -3.0%
+   p=0.320: u +11.6%, d -5.4%
+   p=0.400: u +9.7%, d -6.5%
+
+Paso 5a · spreads verticales: mercado vs escenarios (p central)
+            rango  mercado  escenarios
+ < 104.50 (-5.5%)    0.249       0.305
+ < 107.50 (-2.8%)    0.447       0.438
+> 123.00 (+11.2%)    0.092       0.184
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [] | CARO [90.0, 95.0, 97.0, 98.0, 99.0, 100.0, 101.0, 102.0, 103.0, 104.0] | depende 5
+   C: BARATO [111.0, 114.0, 115.0, 117.0, 118.0, 120.0, 121.0, 130.0, 133.0] | CARO [] | depende 1
+
+Paso 6 · |d| en la grilla ['-3.0%', '-5.4%', '-6.5%']; candidatos 1080, pasan costo y recargo 3 (robustez recargo 25%; severidad promedio; suba sin topear True; piso de suba 0%)
+   DECISIÓN: PUT SPREAD (menor pérdida en el escenario malo entre las que pasan costo y recargo)
+   real: +0.7% (spot t1 111.39, paridad)
+                      alternativa                         patas  costo      ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                       sin cubrir                             — 0.0000  0.0000  0.0000 -0.0544   -0.0815   0.1155         0.1733  0.0069
+      hedge ingenuo (put ~5% OTM)                   1 x (+P105) 0.0154 -0.0021 -0.0062 -0.0664   -0.0664   0.1000         0.1578 -0.0029
+                        mejor put ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                 mejor put spread         0.75 x (+P106, -P105) 0.0024 -0.0000 -0.0004 -0.0500   -0.0772   0.1131         0.1709  0.0066
+                     mejor collar ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+          mejor put spread collar ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+achicar equivalente (comparación)      queda 92% de la posición 0.0000  0.0000  0.0000 -0.0500   -0.0750   0.1062         0.1593  0.0063
+   Marcas: spot t0 por paridad difiere -2.1% del último negocio
+
+==============================================================================================================
+Brasil 2026 · 2T (bueno = Flávio) · BOVA11  (víspera 2026-10-23, marcado 2026-10-26)
+==============================================================================================================
+Spot 202.27 (paridad; último 201.69) | IV 2026-10-30 80.7% | IV 2026-11-06 76.2% | vol base 20.2% (IV 2026-10-09 medida 2026-10-05; RV20 14.8%) | salto implícito (1 sd) 11.1%
+Opciones del vencimiento del evento: 63 cotizadas; líquidas OTM 0,7-1,3 S0: 11 puts, 14 calls
+P(bueno): encuestas 66%, 63% | fuentes 77%, 76%, 60%, 84%, 82%, 79% | grilla [0.6, 0.763, 0.84]
+Event beta: r_previo +7.6% (datos) / Δp 0.27 = u - d 28.0%
+Severidad primaria: promedio (event beta y term structure)
+   p=0.600: u +10.1%, d -15.2% | event beta: u +11.2%, d -16.8% | term structure: u +9.0%, d -13.6%
+   p=0.763: u +6.4%, d -20.6% | event beta: u +6.6%, d -21.3% | term structure: u +6.2%, d -19.9%
+   p=0.840: u +4.7%, d -24.4% | event beta: u +4.5%, d -23.5% | term structure: u +4.8%, d -25.4%
+
+Paso 5a · spreads verticales: mercado vs escenarios (p central)
+            rango  mercado  escenarios
+< 156.00 (-22.9%)    0.024       0.032
+< 180.00 (-11.0%)    0.206       0.237
+ > 218.50 (+8.0%)    0.256       0.250
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [190.0, 192.0, 195.0] | CARO [] | depende 8
+   C: BARATO [] | CARO [245.0] | depende 13
+
+Paso 6 · |d| en la grilla ['-15.2%', '-20.6%', '-24.4%']; candidatos 2475, pasan costo y recargo 138 (robustez recargo 25%; severidad promedio; suba sin topear False; piso de suba 0%)
+   DECISIÓN: COLLAR (menor pérdida en el escenario malo entre las que pasan costo y recargo)
+   real: -14.2% (spot t1 173.58, paridad)
+                      alternativa                         patas  costo      ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                       sin cubrir                             — 0.0000  0.0000  0.0000 -0.2061   -0.3091   0.0640         0.0960 -0.1419
+      hedge ingenuo (put ~5% OTM)                   1 x (+P192) 0.0267  0.0095  0.0023 -0.0776   -0.0776   0.0372         0.0693 -0.0845
+                        mejor put ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                 mejor put spread ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                     mejor collar            1 x (+P199, -C205) 0.0012  0.0020 -0.0025 -0.0174   -0.0174   0.0122         0.0122 -0.0065
+          mejor put spread collar     1 x (+P202, -P170, -C205) 0.0019 -0.0056 -0.0092 -0.0498   -0.1529   0.0116         0.0116 -0.0053
+achicar equivalente (comparación)       queda 8% de la posición 0.0000  0.0000  0.0000 -0.0174   -0.0261   0.0054         0.0081 -0.0120
+   Marcas: vol base medida 2026-10-05; día ideal 2026-10-20 sin datos
+
+==============================================================================================================
+Brasil 2022 · 2T (bueno = Bolsonaro) · EWZ  (víspera 2022-10-28, marcado 2022-10-31)
+==============================================================================================================
+Spot 31.43 (paridad; último 31.45) | IV 2022-11-04 91.3% | IV 2022-11-11 69.5% | vol base 36.4% (vol forward 2022-11-04-2022-11-11 (fuera de regla)) | salto implícito (1 sd) 12.0%
+Opciones del vencimiento del evento: 66 cotizadas; líquidas OTM 0,7-1,3 S0: 7 puts, 10 calls
+P(bueno): encuestas 13%, 30% | fuentes 30%, 34%, 37%, 30%, 32%, 32%, 27%, 31%, 35%, 34%, 40% | grilla [0.128, 0.32, 0.4]
+Severidad primaria: term structure
+   p=0.128: u +31.4%, d -4.6%
+   p=0.320: u +17.5%, d -8.2%
+   p=0.400: u +14.7%, d -9.8%
+
+Paso 5a · spreads verticales: mercado vs escenarios (p central)
+          rango  mercado  escenarios
+< 28.75 (-8.5%)    0.257       0.327
+< 30.00 (-4.5%)    0.410       0.533
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [] | CARO [27.0, 28.0] | depende 5
+   C: BARATO [33.0, 33.5, 34.0, 34.5, 35.0] | CARO [] | depende 5
+
+Paso 6 · |d| en la grilla ['-4.6%', '-8.2%', '-9.8%']; candidatos 168, pasan costo y recargo 0 (robustez recargo 25%; severidad promedio; suba sin topear True; piso de suba 0%)
+   DECISIÓN: NO HACER NADA (sin cobertura barata)
+   real: +4.0% (spot t1 32.68, paridad)
+                alternativa                         patas  costo     ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                 sin cubrir                             — 0.0000 0.0000  0.0000 -0.0824   -0.1236   0.1751         0.2627  0.0398
+hedge ingenuo (put ~5% OTM)                    1 x (+P30) 0.0286 0.0003 -0.0117 -0.0740   -0.0740   0.1465         0.2340  0.0152
+                  mejor put ninguna pasa costo y robustez    NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+           mejor put spread ninguna pasa costo y robustez    NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+               mejor collar ninguna pasa costo y robustez    NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+    mejor put spread collar ninguna pasa costo y robustez    NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+   Marcas: FUERA DE REGLA: sin vencimiento previo ni historia de precios; vol forward entre vencimientos
+
+==============================================================================================================
+Brasil 2026 · 2T (bueno = Flávio) · EWZ  (víspera 2026-10-23, marcado 2026-10-26)
+==============================================================================================================
+Spot 42.56 (paridad; último 42.58) | IV 2026-10-30 117.5% | IV 2026-11-06 82.1% | vol base 64.6% (vol forward 2026-11-06-2026-11-13 (fuera de regla)) | salto implícito (1 sd) 14.4%
+Opciones del vencimiento del evento: 92 cotizadas; líquidas OTM 0,7-1,3 S0: 11 puts, 8 calls
+P(bueno): encuestas 66%, 63% | fuentes 77%, 76%, 60%, 84%, 82%, 79% | grilla [0.6, 0.763, 0.84]
+Event beta: r_previo +12.5% (EWZ 38,19 -> 42,98 (Rio Times vía UA.News; Kalkine)) / Δp 0.27 = u - d 46.5%
+Severidad primaria: promedio (event beta y term structure)
+   p=0.600: u +15.2%, d -22.8% | event beta: u +18.6%, d -27.9% | term structure: u +11.8%, d -17.7%
+   p=0.763: u +9.5%, d -30.7% | event beta: u +11.0%, d -35.4% | term structure: u +8.0%, d -25.9%
+   p=0.840: u +6.9%, d -36.0% | event beta: u +7.4%, d -39.0% | term structure: u +6.3%, d -33.0%
+
+Paso 5a · spreads verticales: mercado vs escenarios (p central)
+           rango  mercado  escenarios
+< 29.50 (-30.7%)    0.055       0.122
+< 36.00 (-15.4%)    0.240       0.236
+> 48.50 (+14.0%)    0.153       0.242
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [] | CARO [] | depende 11
+   C: BARATO [44.0, 45.0, 45.5, 46.0, 47.0, 51.0] | CARO [] | depende 2
+
+Paso 6 · |d| en la grilla ['-22.8%', '-30.7%', '-36.0%']; candidatos 1485, pasan costo y recargo 6 (robustez recargo 25%; severidad promedio; suba sin topear False; piso de suba 0%)
+   DECISIÓN: COLLAR (menor pérdida en el escenario malo entre las que pasan costo y recargo)
+   real: -19.8% (spot t1 34.14, paridad)
+                      alternativa                         patas   costo      ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                       sin cubrir                             —  0.0000  0.0000  0.0000 -0.3066   -0.4599   0.0952         0.1428 -0.1978
+      hedge ingenuo (put ~5% OTM)                    1 x (+P40)  0.0498  0.0098 -0.0036 -0.1099   -0.1099   0.0454         0.0930 -0.1090
+                        mejor put ninguna pasa costo y robustez     NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                 mejor put spread ninguna pasa costo y robustez     NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                     mejor collar              1 x (+P41, -C43) -0.0021 -0.0043 -0.0093 -0.0344   -0.0344   0.0126         0.0126 -0.0395
+          mejor put spread collar ninguna pasa costo y robustez     NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+achicar equivalente (comparación)      queda 11% de la posición  0.0000  0.0000  0.0000 -0.0344   -0.0517   0.0107         0.0160 -0.0222
+   Marcas: FUERA DE REGLA: sin vencimiento previo ni historia de precios; vol forward entre vencimientos | r_previo externo: EWZ 38,19 -> 42,98 (Rio Times vía UA.News; Kalkine)
+
+==============================================================================================================
+México 2024 · única (bueno = Sin mayoría calificada) · EWW  (víspera 2024-05-31, marcado 2024-06-03)
+==============================================================================================================
+Spot 64.09 (paridad; último 64.90) | IV 2024-06-21 25.0% | IV 2024-07-19 19.7% | vol base 14.4% (vol forward 2024-06-21-2024-07-19 (fuera de regla)) | salto implícito (1 sd) 5.1%
+Opciones del vencimiento del evento: 88 cotizadas; líquidas OTM 0,7-1,3 S0: 0 puts, 0 calls
+P(bueno): encuestas sin dato | fuentes 70%, 50% | grilla [0.5, 0.6, 0.7]
+Severidad primaria: term structure
+   p=0.500: u +5.1%, d -5.1%
+   p=0.600: u +4.1%, d -6.2%
+   p=0.700: u +3.3%, d -7.8%
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [] | CARO [] | depende 0
+   C: BARATO [] | CARO [] | depende 0
+
+Paso 6 · |d| en la grilla ['-5.1%', '-6.2%', '-7.8%']; candidatos 0, pasan costo y recargo 0 (robustez recargo 25%; severidad promedio; suba sin topear False; piso de suba 0%)
+   DECISIÓN: NO HACER NADA (sin opciones líquidas (criterio 3 del paso 0))
+   real: -10.2% (spot t1 57.55, paridad)
+                alternativa                         patas  costo      ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                 sin cubrir                             — 0.0000  0.0000  0.0000 -0.0622   -0.0933   0.0415         0.0622 -0.1021
+hedge ingenuo (put ~5% OTM)       1 x (+P61) [no líquido] 0.0101 -0.0024 -0.0036 -0.0584   -0.0584   0.0313         0.0521 -0.0381
+                  mejor put ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+           mejor put spread ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+               mejor collar ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+    mejor put spread collar ninguna pasa costo y robustez    NaN     NaN     NaN     NaN       NaN      NaN            NaN     NaN
+   Marcas: FUERA DE REGLA: sin vencimiento previo ni historia de precios; vol forward entre vencimientos
+
+==============================================================================================================
+India 2024 · conteo (bueno = BJP >= 272) · INDA  (víspera 2024-06-03, marcado 2024-06-04)
+==============================================================================================================
+Spot 54.70 (paridad; último 54.80) | IV 2024-06-21 20.4% | IV 2024-07-19 16.9% | vol base 13.9% (vol forward 2024-06-21-2024-07-19 (fuera de regla)) | salto implícito (1 sd) 3.6%
+Opciones del vencimiento del evento: 37 cotizadas; líquidas OTM 0,7-1,3 S0: 2 puts, 2 calls
+P(bueno): encuestas sin dato | fuentes 89% | grilla [0.889]
+Severidad primaria: term structure
+   p=0.889: u +1.3%, d -10.2%
+
+Paso 5a · spreads verticales: mercado vs escenarios (p central)
+          rango  mercado  escenarios
+> 55.00 (+0.5%)    0.514       0.548
+
+Paso 5c · zonas (comprado al ask / vendido al bid, toda la grilla):
+   P: BARATO [52.0] | CARO [] | depende 1
+   C: BARATO [] | CARO [55.0, 56.0] | depende 0
+
+Paso 6 · |d| en la grilla ['-10.2%']; candidatos 27, pasan costo y recargo 11 (robustez recargo 25%; severidad promedio; suba sin topear False; piso de suba 0%)
+   DECISIÓN: COLLAR (menor pérdida en el escenario malo entre las que pasan costo y recargo)
+   real: -6.1% (spot t1 51.38, paridad)
+                      alternativa                         patas   costo     ve  ve_min  P_malo  P_estres  P_bueno  P_alza_estres  P_real
+                       sin cubrir                             —  0.0000 0.0000  0.0000 -0.1024   -0.1537   0.0128         0.0192 -0.0607
+      hedge ingenuo (put ~5% OTM)                    1 x (+P52)  0.0046 0.0013  0.0013 -0.0539   -0.0539   0.0082         0.0146 -0.0387
+                        mejor put                  0.5 x (+P52)  0.0023 0.0007  0.0007 -0.0782   -0.1038   0.0105         0.0169 -0.0497
+                 mejor put spread ninguna pasa costo y robustez     NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+                     mejor collar              1 x (+P54, -C55) -0.0046 0.0004  0.0004 -0.0082   -0.0082   0.0101         0.0101 -0.0204
+          mejor put spread collar ninguna pasa costo y robustez     NaN    NaN     NaN     NaN       NaN      NaN            NaN     NaN
+achicar equivalente (comparación)       queda 8% de la posición  0.0000 0.0000  0.0000 -0.0082   -0.0123   0.0010         0.0015 -0.0049
+   Marcas: FUERA DE REGLA: sin vencimiento previo ni historia de precios; vol forward entre vencimientos
+
+
+RESUMEN, TRES REGLAS (principal / piso50 / v1)
+grupo     evento activo     regla resultado  p_central      u       d          decision                        patas   costo  P_malo_protocolo  P_bueno_protocolo  retorno_real  P_real_protocolo  P_real_ingenuo
+ main BR-2022-2T BOVA11 principal      malo      0.320 0.1155 -0.0544        put spread        0.75 x (+P106, -P105)  0.0024           -0.0500             0.1131        0.0069            0.0066         -0.0029
+ main BR-2022-2T BOVA11    piso50      malo      0.320 0.1155 -0.0544 put spread collar 0.75 x (+P110, -P104, -C115) -0.0026           -0.0152             0.0612        0.0069            0.0065         -0.0029
+ main BR-2022-2T BOVA11        v1      malo      0.320 0.1155 -0.0544 put spread collar    1 x (+P110, -P102, -C112) -0.0123            0.0067             0.0248        0.0069            0.0017         -0.0029
+ main BR-2026-2T BOVA11 principal      malo      0.763 0.0640 -0.2061            collar           1 x (+P199, -C205)  0.0012           -0.0174             0.0122       -0.1419           -0.0065         -0.0845
+ main BR-2026-2T BOVA11    piso50      malo      0.763 0.0640 -0.2061            collar           1 x (+P192, -C209)  0.0005           -0.0513             0.0328       -0.1419           -0.0665         -0.0845
+ main BR-2026-2T BOVA11        v1      malo      0.763 0.0663 -0.2134            collar        0.75 x (+P199, -C205)  0.0009           -0.0664             0.0258       -0.1419           -0.0404         -0.0845
+ main BR-2022-2T    EWZ principal      malo      0.320 0.1751 -0.0824     no hacer nada                            —  0.0000           -0.0824             0.1751        0.0398            0.0398          0.0152
+ main BR-2022-2T    EWZ    piso50      malo      0.320 0.1751 -0.0824 put spread collar  0.75 x (+P30.5, -P29, -C33) -0.0072           -0.0395             0.0885        0.0398            0.0363          0.0152
+ main BR-2022-2T    EWZ        v1      malo      0.320 0.1751 -0.0824 put spread collar       1 x (+P31, -P28, -C32) -0.0067           -0.0068             0.0250        0.0398            0.0156          0.0152
+ main BR-2026-2T    EWZ principal      malo      0.763 0.0952 -0.3066            collar             1 x (+P41, -C43) -0.0021           -0.0344             0.0126       -0.1978           -0.0395         -0.1090
+ main BR-2026-2T    EWZ    piso50      malo      0.763 0.0952 -0.3066            collar           0.5 x (+P41, -C43) -0.0011           -0.1705             0.0539       -0.1978           -0.1187         -0.1090
+ main BR-2026-2T    EWZ        v1      malo      0.763 0.1101 -0.3544     no hacer nada                            —  0.0000           -0.3544             0.1101       -0.1978           -0.1978         -0.1090
+ main    MX-2024    EWW principal      malo      0.600 0.0415 -0.0622     no hacer nada                            —  0.0000           -0.0622             0.0415       -0.1021           -0.1021         -0.0381
+ main    MX-2024    EWW    piso50      malo      0.600 0.0415 -0.0622     no hacer nada                            —  0.0000           -0.0622             0.0415       -0.1021           -0.1021         -0.0381
+ main    MX-2024    EWW        v1      malo      0.600 0.0415 -0.0622     no hacer nada                            —  0.0000           -0.0622             0.0415       -0.1021           -0.1021         -0.0381
+ main    IN-2024   INDA principal      malo      0.889 0.0128 -0.1024            collar             1 x (+P54, -C55) -0.0046           -0.0082             0.0101       -0.0607           -0.0204         -0.0387
+ main    IN-2024   INDA    piso50      malo      0.889 0.0128 -0.1024            collar             1 x (+P54, -C55) -0.0046           -0.0082             0.0101       -0.0607           -0.0204         -0.0387
+ main    IN-2024   INDA        v1      malo      0.889 0.0128 -0.1024            collar             1 x (+P54, -C55) -0.0046           -0.0082             0.0101       -0.0607           -0.0204         -0.0387
+ expl BR-2014-1T BOVA11 principal     bueno      0.154 0.1708 -0.0311     no hacer nada                            —  0.0000           -0.0311             0.1708        0.0503            0.0503             NaN
+ expl BR-2014-1T BOVA11    piso50     bueno      0.154 0.1708 -0.0311     no hacer nada                            —  0.0000           -0.0311             0.1708        0.0503            0.0503             NaN
+ expl BR-2014-1T BOVA11        v1     bueno      0.154 0.1708 -0.0311     no hacer nada                            —  0.0000           -0.0311             0.1708        0.0503            0.0503             NaN
+ expl BR-2014-2T BOVA11 principal      malo      0.315 0.1862 -0.0856     no hacer nada                            —  0.0000           -0.0856             0.1862       -0.0239           -0.0239             NaN
+ expl BR-2014-2T BOVA11    piso50      malo      0.315 0.1862 -0.0856     no hacer nada                            —  0.0000           -0.0856             0.1862       -0.0239           -0.0239             NaN
+ expl BR-2014-2T BOVA11        v1      malo      0.315 0.1862 -0.0856     no hacer nada                            —  0.0000           -0.0856             0.1862       -0.0239           -0.0239             NaN
+ expl BR-2018-2T BOVA11 principal     bueno      0.980 0.0078 -0.3808     no hacer nada                            —  0.0000           -0.3808             0.0078       -0.0230           -0.0230         -0.0752
+ expl BR-2018-2T BOVA11    piso50     bueno      0.980 0.0078 -0.3808     no hacer nada                            —  0.0000           -0.3808             0.0078       -0.0230           -0.0230         -0.0752
+ expl BR-2018-2T BOVA11        v1     bueno      0.980 0.0070 -0.3446     no hacer nada                            —  0.0000           -0.3446             0.0070       -0.0230           -0.0230         -0.0752
+ expl BR-2022-1T BOVA11 principal     bueno      0.650 0.0220 -0.0408 put spread collar    1 x (+P105, -P100, -C108) -0.0134            0.0051             0.0334        0.0530            0.0188          0.0427
+ expl BR-2022-1T BOVA11    piso50     bueno      0.650 0.0220 -0.0408 put spread collar    1 x (+P105, -P100, -C108) -0.0134            0.0051             0.0334        0.0530            0.0188          0.0427
+ expl BR-2022-1T BOVA11        v1     bueno      0.650 0.0220 -0.0408 put spread collar    1 x (+P105, -P100, -C108) -0.0134            0.0051             0.0334        0.0530            0.0188          0.0427
+ expl BR-2026-1T BOVA11 principal     bueno      0.287 0.1196 -0.0481     no hacer nada                            —  0.0000           -0.0481             0.1196        0.0409            0.0409          0.0257
+ expl BR-2026-1T BOVA11    piso50     bueno      0.287 0.1196 -0.0481     no hacer nada                            —  0.0000           -0.0481             0.1196        0.0409            0.0409          0.0257
+ expl BR-2026-1T BOVA11        v1     bueno      0.287 0.1196 -0.0481     no hacer nada                            —  0.0000           -0.0481             0.1196        0.0409            0.0409          0.0257

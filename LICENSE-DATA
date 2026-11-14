@@ -1,0 +1,35 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Santiago Negrotto
+
+The files in inputs/, results/ and docs/ of this repository are licensed under
+the Creative Commons Attribution 4.0 International License.
+
+You are free to:
+  Share  - copy and redistribute the material in any medium or format, for any
+           purpose, even commercially.
+  Adapt  - remix, transform, and build upon the material for any purpose, even
+           commercially.
+
+Under the following terms:
+  Attribution - You must give appropriate credit, provide a link to the
+           license, and indicate if changes were made. You may do so in any
+           reasonable manner, but not in any way that suggests the licensor
+           endorses you or your use.
+  No additional restrictions - You may not apply legal terms or technological
+           measures that legally restrict others from doing anything the
+           license permits.
+
+Suggested attribution:
+  Negrotto, S. (2026). Hedging Scheduled Political Events: Cheap Convexity for
+  Long-Only Emerging-Market Investors. SSRN Working Paper,
+  https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7701898
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Third-party data are not covered by this licence. In particular, the
+iVolatility option chains (purchased, not redistributable), the B3 COTAHIST
+files, the Stooq daily closes and the FRED series are not included in this
+repository and remain subject to their providers' terms. Numbers derived from
+them that appear in results/ (registries, logs, scale factors) are the
+author's computations.

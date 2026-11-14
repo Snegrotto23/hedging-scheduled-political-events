@@ -1,0 +1,30 @@
+{
+  "title": "Hedging Scheduled Political Events: replication code, inputs and results",
+  "upload_type": "software",
+  "description": "<p>Code, event inputs and results for the paper <em>Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors</em> (Santiago Negrotto, SSRN Working Paper, 2026). The decision protocol in <code>code/framework.py</code> (SHA-256 prefix 221320a15437) was frozen on 11 November 2026 and is archived here unchanged, together with the pre-registered run of 11 November 2026 and the final run of 13 November 2026 reported in the paper. Purchased option data (iVolatility) and third-party price data (B3, Stooq, FRED) are not included; the repository lists the exact files and ticker-days and provides a download script for the public sources.</p>",
+  "creators": [
+    {
+      "name": "Negrotto, Santiago"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "political risk",
+    "elections",
+    "options",
+    "hedging",
+    "emerging markets",
+    "prediction markets",
+    "pre-registration"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7701898",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-workingpaper",
+      "scheme": "url"
+    }
+  ],
+  "language": "eng",
+  "version": "1.0.0"
+}

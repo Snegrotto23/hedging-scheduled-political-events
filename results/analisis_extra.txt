@@ -1,0 +1,109 @@
+MARCADO max(mid, intrínseco) vs mid, estructuras elegidas (pp = diferencia en el P&L real del caso)
+control: P_real con mid reproduce el registro en 56 de 56 filas
+ grupo      evento activo     regla                        patas  retorno_real  P_real_mid  P_real_intrinseco  diferencia_pp
+  main  BR-2022-2T BOVA11 principal        0.75 x (+P106, -P105)        0.0069      0.0066             0.0066         0.0000
+  main  BR-2022-2T BOVA11    piso50 0.75 x (+P110, -P104, -C115)        0.0069      0.0065             0.0065         0.0000
+  main  BR-2022-2T BOVA11        v1    1 x (+P110, -P102, -C112)        0.0069      0.0017             0.0017         0.0000
+  main  BR-2026-2T BOVA11 principal           1 x (+P199, -C205)       -0.1419     -0.0066            -0.0066         0.0000
+  main  BR-2026-2T BOVA11    piso50           1 x (+P192, -C209)       -0.1419     -0.0665            -0.0596         0.6926
+  main  BR-2026-2T BOVA11        v1        0.75 x (+P199, -C205)       -0.1419     -0.0404            -0.0404         0.0000
+  main  BR-2022-2T    EWZ    piso50       1 x (+P30, -P29, -C34)        0.0398      0.0452             0.0452         0.0000
+  main  BR-2022-2T    EWZ        v1    0.75 x (+P31, -P28, -C32)        0.0398      0.0217             0.0217         0.0000
+  main  BR-2026-2T    EWZ principal             1 x (+P41, -C43)       -0.1978     -0.0395            -0.0346         0.4972
+  main  BR-2026-2T    EWZ    piso50           0.5 x (+P41, -C43)       -0.1978     -0.1187            -0.1162         0.2486
+  main     IN-2024   INDA principal             1 x (+P54, -C55)       -0.0607     -0.0204            -0.0115         0.8959
+  main     IN-2024   INDA    piso50             1 x (+P54, -C55)       -0.0607     -0.0204            -0.0115         0.8959
+  main     IN-2024   INDA        v1             1 x (+P54, -C55)       -0.0607     -0.0204            -0.0115         0.8959
+  expl  BR-2022-1T BOVA11 principal    1 x (+P105, -P100, -C108)        0.0530      0.0188             0.0188         0.0000
+  expl  BR-2022-1T BOVA11    piso50    1 x (+P105, -P100, -C108)        0.0530      0.0188             0.0188         0.0000
+  expl  BR-2022-1T BOVA11        v1    1 x (+P105, -P100, -C108)        0.0530      0.0188             0.0188         0.0000
+oos-BR  BR-2014-2T    EWZ    piso50       1 x (+P39, -P38, -C45)       -0.0481     -0.0195            -0.0195         0.0000
+oos-BR  BR-2014-2T    EWZ        v1             1 x (+P39, -C42)       -0.0481     -0.0103            -0.0103         0.0000
+oos-BR  BR-2018-2T    EWZ        v1      0.75 x (+P38.5, -C40.5)       -0.0332     -0.0193            -0.0193         0.0000
+oos-BR  BR-2022-1T    EWZ principal     1 x (+P29.5, -P26, -C30)        0.1003      0.0110             0.0110         0.0000
+oos-BR  BR-2022-1T    EWZ    piso50   1 x (+P29, -P26.5, -C30.5)        0.1003      0.0284             0.0284         0.0000
+oos-BR  BR-2022-1T    EWZ        v1       1 x (+P29, -P25, -C30)        0.1003      0.0157             0.0157         0.0000
+oos-BR  BR-2026-1T    EWZ    piso50   0.5 x (+P38, -P36, -C38.5)        0.1255      0.0739             0.0739         0.0000
+oos-BR  BR-2026-1T    EWZ        v1     1 x (+P38, -P35, -C38.5)        0.1255      0.0165             0.0165         0.0000
+oos-AR AR-2025-PBA   GGAL principal             1 x (+P39, -C41)       -0.2363     -0.0338            -0.0338         0.0000
+oos-AR AR-2025-PBA   GGAL    piso50             1 x (+P38, -C41)       -0.2363     -0.0488            -0.0488         0.0000
+oos-AR AR-2025-PBA   GGAL        v1             1 x (+P39, -C41)       -0.2363     -0.0338            -0.0338         0.0000
+oos-AR AR-2025-PBA    YPF principal             1 x (+P30, -C31)       -0.1534     -0.0215            -0.0215         0.0000
+oos-AR AR-2025-PBA    YPF    piso50             1 x (+P28, -C31)       -0.1534     -0.0587            -0.0587         0.0000
+oos-AR AR-2025-PBA    YPF        v1             1 x (+P30, -C31)       -0.1534     -0.0215            -0.0215         0.0000
+oos-AR AR-2025-LEG   GGAL principal             1 x (+P30, -C36)        0.3777      0.0560             0.0560         0.0000
+oos-AR AR-2025-LEG   GGAL    piso50             1 x (+P30, -C40)        0.3777      0.1191             0.1191         0.0000
+oos-AR AR-2025-LEG    YPF principal             1 x (+P25, -C28)        0.2322      0.0321             0.0321         0.0000
+oos-AR AR-2025-LEG    YPF    piso50             1 x (+P24, -C29)        0.2322      0.0902             0.0902         0.0000
+oos-AR AR-2025-LEG    YPF        v1    0.75 x (+P25, -P24, -C33)        0.2322      0.1886             0.1886         0.0000
+  main  BR-2022-2T BOVA11   theta10         0.5 x (+P110, -P109)        0.0069      0.0059             0.0059         0.0000
+  main  BR-2022-2T BOVA11   theta50        0.75 x (+P106, -P105)        0.0069      0.0066             0.0066         0.0000
+  main  BR-2026-2T BOVA11   theta10           1 x (+P199, -C205)       -0.1419     -0.0066            -0.0066         0.0000
+  main  BR-2026-2T BOVA11   theta50           1 x (+P199, -C205)       -0.1419     -0.0066            -0.0066         0.0000
+  main  BR-2026-2T    EWZ   theta50             1 x (+P41, -C43)       -0.1978     -0.0395            -0.0346         0.4972
+  main     IN-2024   INDA   theta10             1 x (+P54, -C55)       -0.0607     -0.0204            -0.0115         0.8959
+  main     IN-2024   INDA   theta50             1 x (+P54, -C55)       -0.0607     -0.0204            -0.0115         0.8959
+  expl  BR-2022-1T BOVA11   theta10    1 x (+P105, -P100, -C108)        0.0530      0.0188             0.0188         0.0000
+  expl  BR-2022-1T BOVA11   theta50    1 x (+P105, -P100, -C108)        0.0530      0.0188             0.0188         0.0000
+oos-BR  BR-2018-2T    EWZ   theta50           1 x (+P39, -C40.5)       -0.0332     -0.0126            -0.0126         0.0000
+oos-BR  BR-2022-1T    EWZ   theta10     1 x (+P29, -P25.5, -C30)        0.1003      0.0167             0.0167         0.0000
+oos-BR  BR-2022-1T    EWZ   theta50     1 x (+P29.5, -P26, -C30)        0.1003      0.0110             0.0110         0.0000
+oos-BR  BR-2026-1T    EWZ   theta50   0.5 x (+P37, -P36.5, -C44)        0.1255      0.1200             0.1200         0.0000
+oos-AR AR-2025-PBA   GGAL   theta10             1 x (+P39, -C41)       -0.2363     -0.0338            -0.0338         0.0000
+oos-AR AR-2025-PBA   GGAL   theta50             1 x (+P39, -C41)       -0.2363     -0.0338            -0.0338         0.0000
+oos-AR AR-2025-PBA    YPF   theta10             1 x (+P30, -C31)       -0.1534     -0.0215            -0.0215         0.0000
+oos-AR AR-2025-PBA    YPF   theta50             1 x (+P30, -C31)       -0.1534     -0.0215            -0.0215         0.0000
+oos-AR AR-2025-LEG   ARGT   theta50             1 x (+P60, -C76)        0.1874      0.0592             0.0592         0.0000
+oos-AR AR-2025-LEG   GGAL   theta50             1 x (+P30, -C36)        0.3777      0.0560             0.0560         0.0000
+oos-AR AR-2025-LEG    YPF   theta10             1 x (+P25, -C29)        0.2322      0.0727             0.0727         0.0000
+oos-AR AR-2025-LEG    YPF   theta50             1 x (+P25, -C28)        0.2322      0.0321             0.0321         0.0000
+
+SEVERIDAD ESTIMADA vs REALIZADA (regla principal; escenario estimado = d si salió malo, u si salió bueno)
+ grupo       evento activo resultado  p_central                                 metodo  escenario_estimado  retorno_real  ratio_real_estimado  salto_ex_ante  salto_ex_post  abs_ret
+  main   BR-2022-2T BOVA11      malo      0.320                         term structure              -0.054         0.007               -0.126          0.079          0.067    0.007
+  main   BR-2026-2T BOVA11      malo      0.763 promedio (event beta y term structure)              -0.204        -0.142                0.695          0.109          0.103    0.142
+  main   BR-2022-2T    EWZ      malo      0.320                         term structure              -0.079         0.040               -0.502          0.116          0.113    0.040
+  main   BR-2026-2T    EWZ      malo      0.763 promedio (event beta y term structure)              -0.319        -0.198                0.620          0.159          0.150    0.198
+  main      MX-2024    EWW      malo      0.600                         term structure              -0.053        -0.102                1.916          0.044          0.000    0.102
+  main      IN-2024   INDA      malo      0.889                         term structure              -0.108        -0.061                0.562          0.038          0.000    0.061
+  expl   BR-2014-1T BOVA11     bueno      0.154                         term structure               0.171         0.050                0.295          0.073          0.000    0.050
+  expl   BR-2014-2T BOVA11      malo      0.315                         term structure              -0.086        -0.024                0.279          0.126            NaN    0.024
+  expl   BR-2018-2T BOVA11     bueno      0.980 promedio (event beta y term structure)               0.008        -0.023               -2.956          0.060          0.066    0.023
+  expl   BR-2022-1T BOVA11     bueno      0.650                         term structure               0.022         0.053                2.414          0.030          0.023    0.053
+  expl   BR-2026-1T BOVA11     bueno      0.287                         term structure               0.120         0.041                0.342          0.076          0.074    0.041
+oos-CL   CL-2021-2T    ECH      malo      0.289                         term structure              -0.117        -0.114                0.969          0.184          0.174    0.114
+oos-BR   BR-2014-1T    EWZ     bueno      0.154                         term structure               0.129         0.062                0.480          0.055          0.043    0.062
+oos-BR   BR-2014-2T    EWZ      malo      0.315                         term structure              -0.093        -0.048                0.516          0.138          0.147    0.048
+oos-BR   BR-2018-2T    EWZ     bueno      0.980 promedio (event beta y term structure)               0.010        -0.033               -3.409          0.073          0.062    0.033
+oos-BR   BR-2022-1T    EWZ     bueno      0.650                         term structure               0.061         0.100                1.635          0.084          0.081    0.100
+oos-BR   BR-2026-1T    EWZ     bueno      0.287                         term structure               0.142         0.125                0.882          0.090          0.088    0.125
+oos-AR   AR-2015-1T   ARGT     bueno      0.361                         term structure               0.034         0.053                1.527          0.026          0.000    0.053
+oos-AR   AR-2015-1T    YPF     bueno      0.361                         term structure               0.066         0.075                1.134          0.050          0.000    0.075
+oos-AR   AR-2015-2T   ARGT     bueno      0.806                         term structure               0.029        -0.030               -1.019          0.060          0.057    0.030
+oos-AR   AR-2015-2T    YPF     bueno      0.806                         term structure               0.009        -0.055               -6.224          0.018          0.045    0.055
+oos-AR  AR-2017-LEG   ARGT     bueno      0.903                         term structure               0.016         0.019                1.216          0.048          0.040    0.019
+oos-AR  AR-2017-LEG   GGAL     bueno      0.903                         term structure               0.017         0.061                3.470          0.053          0.000    0.061
+oos-AR  AR-2017-LEG    YPF     bueno      0.903                         term structure               0.008         0.053                6.900          0.024          0.018    0.053
+oos-AR AR-2019-PASO   ARGT      malo      0.769                         term structure              -0.071        -0.239                3.372          0.039          0.000    0.239
+oos-AR AR-2019-PASO   GGAL      malo      0.769                         term structure              -0.260        -0.561                2.162          0.142          0.000    0.561
+oos-AR AR-2019-PASO    YPF      malo      0.769                         term structure              -0.179        -0.332                1.852          0.098          0.000    0.332
+oos-AR AR-2021-PASO   ARGT     bueno      0.349                         term structure               0.014         0.022                1.632          0.010          0.000    0.022
+oos-AR AR-2021-PASO    YPF     bueno      0.349                         term structure               0.074         0.052                0.712          0.054          0.000    0.052
+oos-AR  AR-2021-LEG   ARGT     bueno      0.782                         term structure               0.024        -0.003               -0.140          0.045            NaN    0.003
+oos-AR AR-2023-PASO   ARGT      malo      0.990                         term structure              -0.858        -0.024                0.028          0.086          0.082    0.024
+oos-AR AR-2023-PASO   GGAL      malo      0.990                         term structure              -2.387        -0.058                0.024          0.240            NaN    0.058
+oos-AR AR-2023-PASO    YPF      malo      0.990                         term structure              -1.571        -0.018                0.011          0.158          0.138    0.018
+oos-AR   AR-2023-1T   ARGT      malo      0.261                         term structure              -0.054        -0.026                0.481          0.091          0.081    0.026
+oos-AR   AR-2023-1T   GGAL      malo      0.261                         term structure              -0.165         0.039               -0.233          0.278          0.124    0.039
+oos-AR   AR-2023-1T    YPF      malo      0.261                         term structure              -0.048        -0.068                1.414          0.081          0.064    0.068
+oos-AR   AR-2023-2T   ARGT     bueno      0.531 promedio (event beta y term structure)               0.054         0.152                2.790          0.077          0.079    0.152
+oos-AR   AR-2023-2T   GGAL     bueno      0.531 promedio (event beta y term structure)               0.018         0.180                9.960          0.061          0.217    0.180
+oos-AR   AR-2023-2T    YPF     bueno      0.531 promedio (event beta y term structure)               0.140         0.391                2.781          0.187          0.154    0.391
+oos-AR  AR-2025-PBA   ARGT      malo      0.880                         term structure              -0.136        -0.108                0.796          0.050          0.026    0.108
+oos-AR  AR-2025-PBA   GGAL      malo      0.880                         term structure              -0.434        -0.236                0.544          0.160          0.145    0.236
+oos-AR  AR-2025-PBA    YPF      malo      0.880                         term structure              -0.279        -0.153                0.550          0.103          0.077    0.153
+oos-AR  AR-2025-LEG   ARGT     bueno      0.685                         term structure               0.116         0.187                1.617          0.171          0.155    0.187
+oos-AR  AR-2025-LEG   GGAL     bueno      0.685                         term structure               0.141         0.378                2.670          0.209          0.259    0.378
+oos-AR  AR-2025-LEG    YPF     bueno      0.685                         term structure               0.160         0.232                1.456          0.235          0.229    0.232
+
+Casos con salto ex ante y ex post: 42; correlación de Spearman salto ex ante vs |retorno| 0.35; salto ex post vs |retorno| 0.20; mediana salto ex post / ex ante 0.85

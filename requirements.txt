@@ -1,0 +1,6 @@
+# Versions used for the paper: Python 3.13, pandas 3.0, numpy 2.5, scipy 1.18.
+# Any recent version should give the same numbers.
+pandas
+numpy
+scipy
+matplotlib

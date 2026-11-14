@@ -1,0 +1,70 @@
+event_id,fuente,margen_encuestas,margen_real,error_pp
+BR-2014-2T,Datafolha 3-4 oct,-18.00,-8.04,9.96
+BR-2014-2T,Ibope 2-4 oct,-19.00,-8.04,10.96
+BR-2018-2T,Datafolha 5-6 oct,15.00,16.75,1.75
+BR-2018-2T,Ibope 5-6 oct,16.00,16.75,0.75
+BR-2018-2T,CNT/MDA 4-5 oct,14.80,16.75,1.95
+BR-2022-2T,Datafolha 30 sep-1 oct,-14.00,-5.23,8.77
+BR-2022-2T,Ipec 1 oct,-14.00,-5.23,8.77
+BR-2026-2T,Datafolha 3 oct,-3.00,1.87,4.87
+BR-2026-2T,Quaest 3 oct,-1.00,1.87,2.87
+BR-2026-2T,AtlasIntel 3 oct,-2.90,1.87,4.77
+BR-2026-2T,CNT/MDA 3 oct,-5.70,1.87,7.57
+CL-2017-2T,Cadem 31 oct-2 nov,22.00,13.94,8.06
+CL-2017-2T,CEP 22 sep-16 oct,24.70,13.94,10.76
+CL-2021-2T,Promedio 6 encuestas (PDF),3.00,2.08,0.92
+CL-2025-2T,Última encuesta por encuestadora (CL-2025-1T),-6.48,-2.93,3.55
+CO-2018-2T,Agregado El País 19 may,10.00,14.06,4.06
+CO-2022-2T,Promedio 6 encuestadoras (PDF),-21.50,-12.17,9.33
+CO-2026-2T,Última encuesta por encuestadora (CO-2026-1T),-7.67,2.84,10.51
+TR-2023-2T,POLITICO 12 may,4.00,-4.64,8.64
+TR-2023-2T,Euronews 12 may,3.10,-4.64,7.74
+TR-2023-2T,600vekil 13 may,2.30,-4.64,6.94
+AR-2015-2T,Rouvier,-10.90,-2.93,7.97
+AR-2015-2T,Giacobbe,-11.60,-2.93,8.67
+AR-2015-2T,Circuitos,-12.20,-2.93,9.27
+AR-2015-2T,Dicen,-15.10,-2.93,12.17
+AR-2015-2T,Poliarquía,-10.90,-2.93,7.97
+AR-2015-2T,González y Valladares,-10.10,-2.93,7.17
+AR-2015-2T,Julio Aurelio,-11.00,-2.93,8.07
+AR-2015-2T,Elypsis,-8.50,-2.93,5.57
+AR-2015-2T,Polldata,-9.70,-2.93,6.77
+AR-2019-1T,PASO 2019: promedio de 18 encuestas (AR-2019-PASO-ROB),-4.06,-15.99,11.93
+AR-2021-LEG,PASO 2021 PBA: Raúl Aragón,-0.80,4.34,5.14
+AR-2021-LEG,PASO 2021 PBA: Tendencias,0.90,4.34,3.44
+AR-2021-LEG,PASO 2021 PBA: Federico González,-1.00,4.34,5.34
+AR-2021-LEG,PASO 2021 PBA: Clivajes,-5.00,4.34,9.34
+AR-2021-LEG,PASO 2021 PBA: Trespuntozero,0.80,4.34,3.54
+AR-2021-LEG,PASO 2021 PBA: CIGP,-0.40,4.34,4.74
+AR-2021-LEG,PASO 2021 PBA: CB Consultora,1.00,4.34,3.34
+AR-2021-LEG,PASO 2021 PBA: Giacobbe,6.10,4.34,1.76
+AR-2021-LEG,PASO 2021 PBA: Circuitos,-6.80,4.34,11.14
+AR-2021-LEG,PASO 2021 PBA: Observatorio Electoral,9.00,4.34,4.66
+AR-2021-LEG,PASO 2021 PBA: OPSA,0.10,4.34,4.24
+AR-2021-LEG,PASO 2021 PBA: CEOP,-8.20,4.34,12.54
+AR-2021-LEG,PASO 2021 PBA: Ricardo Rouvier,-10.10,4.34,14.44
+AR-2021-LEG,PASO 2021 PBA: Management & Fit,-5.00,4.34,9.34
+AR-2021-LEG,PASO 2021 PBA: UNLAM,-3.80,4.34,8.14
+AR-2023-1T,PASO 2023 JxC - LLA: promedio de 11 encuestas (AR-2023-PASO),15.52,-1.86,17.38
+AR-2023-1T-ROB,PASO 2023 JxC - LLA: promedio de 11 encuestas (AR-2023-PASO),15.52,-1.86,17.38
+AR-2023-2T,AtlasIntel,-4.40,-6.79,2.39
+AR-2023-2T,Tendencias,0.40,-6.79,7.19
+AR-2023-2T,Circuitos,1.80,-6.79,8.59
+AR-2023-2T,CB Consultora,0.80,-6.79,7.59
+AR-2023-2T,Clivajes,1.70,-6.79,8.49
+AR-2023-2T,Opinaia,3.00,-6.79,9.79
+AR-2023-2T,DC Consultores,9.40,-6.79,16.19
+AR-2023-2T,Proyección,4.60,-6.79,11.39
+AR-2023-2T,CIGP,-0.90,-6.79,5.89
+AR-2023-2T,Giacobbe,4.40,-6.79,11.19
+AR-2023-2T,Fixer,8.20,-6.79,14.99
+AR-2023-2T,Zuban Córdoba,2.00,-6.79,8.79
+AR-2023-2T,Reale Dalla Torre,11.50,-6.79,18.29
+AR-2023-2T,Aresco,2.90,-6.79,9.69
+AR-2023-2T,Univ. de San Andrés,4.90,-6.79,11.69
+AR-2023-2T,CELAG,1.00,-6.79,7.79
+AR-2025-LEG,PBA 7/9 FP - LLA: Aresco,2.20,13.57,11.37
+AR-2025-LEG,PBA 7/9 FP - LLA: Proyección,0.80,13.57,12.77
+AR-2025-LEG,PBA 7/9 FP - LLA: Giacobbe,-2.10,13.57,15.67
+AR-2025-LEG,PBA 7/9 FP - LLA: Analogías,1.90,13.57,11.67
+AR-2025-LEG,PBA 7/9 FP - LLA: Rubikon,-1.30,13.57,14.87

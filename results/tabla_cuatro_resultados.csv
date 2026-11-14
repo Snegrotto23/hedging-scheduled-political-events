@@ -1,0 +1,51 @@
+region,grupo,evento,activo,resultado,estado,decision,motivo,patas,costo,retorno_real,P_real_protocolo,pnl_cobertura,P_real_ingenuo
+Brasil,main,BR-2022-2T,BOVA11,malo,cubrió,put spread,menor pérdida en el escenario malo entre las que pasan costo y recargo,"0.75 x (+P106, -P105)",0.0023727514801804,0.00685099699516,0.0066137218471419,-0.00023727514801809985,-0.0029111805232967
+Brasil,main,BR-2026-2T,BOVA11,malo,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P199, -C205)",0.0012357495737391,-0.141901705386399,-0.0065624120704818,0.1353392933159172,-0.0845629251649001
+Brasil,main,BR-2022-2T,EWZ,malo,no cubrió,no hacer nada,sin cobertura barata,—,0.0,0.0398176216589742,0.0398176216589742,0.0,0.0151574162351784
+Brasil,main,BR-2026-2T,EWZ,malo,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P41, -C43)",-0.0021148600546347,-0.1977999654599573,-0.0395379380381222,0.1582620274218351,-0.1089758431652971
+Resto,main,MX-2024,EWW,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.1021166695424551,-0.1021166695424551,0.0,-0.0381521019507871
+Resto,main,IN-2024,INDA,malo,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P54, -C55)",-0.0045701443284601,-0.0606540944454607,-0.0204368243550115,0.0402172700904492,-0.0387174016688521
+Brasil,expl,BR-2014-1T,BOVA11,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0503393665158371,0.0503393665158371,0.0,
+Brasil,expl,BR-2014-2T,BOVA11,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0238568588469184,-0.0238568588469184,0.0,
+Brasil,expl,BR-2018-2T,BOVA11,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0229718292830369,-0.0229718292830369,0.0,-0.0752025148107845
+Brasil,expl,BR-2022-1T,BOVA11,bueno,cubrió,put spread collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P105, -P100, -C108)",-0.0134094674478976,0.0530339477740997,0.0188492490688959,-0.0341846987052038,0.0426935485801223
+Brasil,expl,BR-2026-1T,BOVA11,bueno,no cubrió,no hacer nada,sin cobertura barata,—,0.0,0.0408754161504341,0.0408754161504341,0.0,0.0256415151304352
+Resto,oos-CL,CL-2021-2T,ECH,malo,no cubrió,no hacer nada,sin cobertura barata,—,0.0,-0.113799435054784,-0.113799435054784,0.0,-0.0818726459915512
+Brasil,oos-BR,BR-2014-1T,EWZ,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0620893427227016,0.0620893427227016,0.0,0.0465093928267884
+Brasil,oos-BR,BR-2014-2T,EWZ,malo,no cubrió,no hacer nada,sin cobertura barata,—,0.0,-0.0481478203859944,-0.0481478203859944,0.0,-0.0678641764074693
+Brasil,oos-BR,BR-2018-2T,EWZ,bueno,no cubrió,no hacer nada,sin cobertura barata,—,0.0,-0.0331987515694843,-0.0331987515694843,0.0,-0.0389450589288543
+Brasil,oos-BR,BR-2022-1T,EWZ,bueno,cubrió,put spread collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P29.5, -P26, -C30)",0.0010134507017009,0.1003276527759686,0.010975082576004,-0.08935257019996459,0.0800586387419502
+Brasil,oos-BR,BR-2026-1T,EWZ,bueno,no cubrió,no hacer nada,sin cobertura barata,—,0.0,0.1254654387153453,0.1254654387153453,0.0,0.1017609664884608
+Resto,oos-AR,AR-2015-1T,ARGT,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0526603955752555,0.0526603955752555,0.0,0.0165292115841494
+Resto,oos-AR,AR-2015-1T,GGAL,,sin opciones,NO EVALUABLE,sin IV ATM en los vencimientos que cruzan el evento (criterio 3),,,,,,
+Resto,oos-AR,AR-2015-1T,YPF,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0751729129156537,0.0751729129156537,0.0,0.0572418416285981
+Resto,oos-AR,AR-2015-2T,ARGT,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0298026314330097,-0.0298026314330097,0.0,-0.0412171568606945
+Resto,oos-AR,AR-2015-2T,GGAL,,sin opciones,NO EVALUABLE,sin IV ATM en los vencimientos que cruzan el evento (criterio 3),,,,,,
+Resto,oos-AR,AR-2015-2T,YPF,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0548093014340705,-0.0548093014340705,0.0,-0.0523732239973773
+Resto,oos-AR,AR-2017-LEG,ARGT,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,0.0190961171228516,0.0190961171228516,0.0,-0.0007956715467855
+Resto,oos-AR,AR-2017-LEG,GGAL,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,0.0606904353242001,0.0606904353242001,0.0,0.0532789104029476
+Resto,oos-AR,AR-2017-LEG,YPF,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,0.0533597861222221,0.0533597861222221,0.0,0.0511830836561295
+Resto,oos-AR,AR-2019-PASO,ARGT,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.239210793126798,-0.239210793126798,0.0,-0.0717224909393219
+Resto,oos-AR,AR-2019-PASO,GGAL,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.5611736966203825,-0.5611736966203825,0.0,-0.1210374639769452
+Resto,oos-AR,AR-2019-PASO,YPF,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.3322702237294234,-0.3322702237294234,0.0,-0.0810662271683939
+Resto,oos-AR,AR-2021-PASO,ARGT,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0220757363253856,0.0220757363253856,0.0,0.0045441795231415
+Resto,oos-AR,AR-2021-PASO,GGAL,,sin opciones,NO EVALUABLE,sin IV ATM en los vencimientos que cruzan el evento (criterio 3),,,,,,
+Resto,oos-AR,AR-2021-PASO,YPF,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.0524271844660193,0.0524271844660193,0.0,0.0378640776699028
+Resto,oos-AR,AR-2021-LEG,ARGT,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.003319843808501,-0.003319843808501,0.0,-0.0231570945714822
+Resto,oos-AR,AR-2021-LEG,GGAL,,sin opciones,NO EVALUABLE,sin IV ATM en los vencimientos que cruzan el evento (criterio 3),,,,,,
+Resto,oos-AR,AR-2021-LEG,YPF,,sin opciones,NO EVALUABLE,sin IV ATM en los vencimientos que cruzan el evento (criterio 3),,,,,,
+Resto,oos-AR,AR-2023-PASO,ARGT,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0239216833742409,-0.0239216833742409,0.0,-0.0470274092544915
+Resto,oos-AR,AR-2023-PASO,GGAL,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0578413834227786,-0.0578413834227786,0.0,-0.09809183064997
+Resto,oos-AR,AR-2023-PASO,YPF,malo,no cubrió,no hacer nada,sin cobertura barata,—,0.0,-0.0178675805024148,-0.0178675805024148,0.0,-0.04371215095066
+Resto,oos-AR,AR-2023-1T,ARGT,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0259849388025109,-0.0259849388025109,0.0,-0.0367344707476275
+Resto,oos-AR,AR-2023-1T,GGAL,malo,no cubrió,no hacer nada,sin cobertura barata,—,0.0,0.0385457803333129,0.0385457803333129,0.0,0.0120674043403738
+Resto,oos-AR,AR-2023-1T,YPF,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.0678313174177419,-0.0678313174177419,0.0,-0.0597010041759213
+Resto,oos-AR,AR-2023-2T,ARGT,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,0.1519098525866171,0.1519098525866171,0.0,0.137811339065176
+Resto,oos-AR,AR-2023-2T,GGAL,bueno,no cubrió,no hacer nada,|d| < 5% en toda la grilla,—,0.0,0.1803276782645659,0.1803276782645659,0.0,0.0959742702406487
+Resto,oos-AR,AR-2023-2T,YPF,bueno,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,0.3906246859811397,0.3906246859811397,0.0,0.3212683669937625
+Resto,oos-AR,AR-2025-PBA,ARGT,malo,sin opciones,no hacer nada,sin opciones líquidas (criterio 3 del paso 0),—,0.0,-0.1083830842000695,-0.1083830842000695,0.0,-0.0589568278255087
+Resto,oos-AR,AR-2025-PBA,GGAL,malo,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P39, -C41)",-0.0012458668940155,-0.2362835939684933,-0.0338302236909731,0.2024533702775202,-0.1017299694148183
+Resto,oos-AR,AR-2025-PBA,YPF,malo,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P30, -C31)",-0.0080978291007782,-0.1534494452676286,-0.0214548309249428,0.1319946143426858,-0.062753759338912
+Resto,oos-AR,AR-2025-LEG,ARGT,bueno,no cubrió,no hacer nada,sin cobertura barata,—,0.0,0.1873607283499747,0.1873607283499747,0.0,0.1681850072536785
+Resto,oos-AR,AR-2025-LEG,GGAL,bueno,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P30, -C36)",-0.0574756349927344,0.3777330261185223,0.0560096546348014,-0.3217233714837209,0.2445577743060888
+Resto,oos-AR,AR-2025-LEG,YPF,bueno,cubrió,collar,menor pérdida en el escenario malo entre las que pasan costo y recargo,"1 x (+P25, -C28)",-0.0110636997588392,0.2321881501952003,0.0321195795561901,-0.2000685706390102,0.1556642268632287

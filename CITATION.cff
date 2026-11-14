@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper (preferred-citation) and, if relevant, this repository."
+title: "Hedging Scheduled Political Events: replication code, inputs and results"
+type: software
+authors:
+  - family-names: Negrotto
+    given-names: Santiago
+    city: Montevideo
+    country: UY
+version: "1.0.0"
+date-released: "2026-11-14"
+license: MIT
+repository-code: "https://github.com/Snegrotto23/hedging-scheduled-political-events"
+keywords:
+  - political risk
+  - elections
+  - options
+  - hedging
+  - emerging markets
+  - prediction markets
+  - pre-registration
+preferred-citation:
+  type: report
+  title: "Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors"
+  authors:
+    - family-names: Negrotto
+      given-names: Santiago
+  institution:
+    name: "SSRN"
+  year: 2026
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7701898"
+  notes: "SSRN Working Paper, abstract id 7701898"
