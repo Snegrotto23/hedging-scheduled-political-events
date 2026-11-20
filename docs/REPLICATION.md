@@ -4,7 +4,7 @@ This is an English translation of the author's replication notes, with the folde
 
 ## Tested environment
 
-The pre-registered run was re-executed from scratch on 11 Nov 2026 with the original B3 and iVolatility ZIP files; the output matched `results/preregistration_2026-11-11/registro_eventos.csv` exactly (33 of 33 rows, difference 0.0) and `results/prueba_liquidez.txt`. Python 3.13, pandas 3.0, numpy 2.5, scipy 1.18 (any recent version should give the same numbers). `figuras.py` also needs matplotlib.
+The in-sample run was re-executed from scratch on 11 Nov 2026 with the original B3 and iVolatility ZIP files; the output matched `results/preregistration_2026-11-11/registro_eventos.csv` exactly (33 of 33 rows, difference 0.0) and `results/prueba_liquidez.txt`. Python 3.13, pandas 3.0, numpy 2.5, scipy 1.18 (any recent version should give the same numbers). `figuras.py` also needs matplotlib.
 
 ## 1. Folders
 
@@ -22,9 +22,9 @@ replica/
   out/             outputs
 ```
 
-**B3 COTAHIST files:** M092014, M102014, M092018, M102018, M092022, M102022, M092026, M102026, D02102026, D05102026, D23102026, D26102026. Annual files (A2002, A2006, A2010) are ignored by the builder. M102026 is used only by the final run (13 Nov); the pre-registered run (11 Nov) did not have it.
+**B3 COTAHIST files:** M092014, M102014, M092018, M102018, M092022, M102022, M092026, M102026, D02102026, D05102026, D23102026, D26102026. Annual files (A2002, A2006, A2010) are ignored by the builder. M102026 is used only by the final run (13 Nov); the in-sample run (11 Nov) did not have it.
 
-**iVolatility files:** product "Options prices (NBBO)", one ZIP per download. The exact ticker-days are listed in [`ivolatility_ticker_days.csv`](ivolatility_ticker_days.csv): the first purchase (11 Nov 2026: main sample and liquidity screen) and the second (12 Nov 2026, 30 ZIP files: out-of-sample Brazil and Argentina, base-volatility days). Duplicate files are harmless: rows are de-duplicated by date and option. AR-2019-1T (25 and 28 Oct 2019) was not bought; BMA and PAM were not bought.
+**iVolatility files:** product "Options prices (NBBO)", one ZIP per download. The exact ticker-days are listed in [`ivolatility_ticker_days.csv`](ivolatility_ticker_days.csv): the first purchase (11 Nov 2026: main sample and liquidity screen) and the second (12 Nov 2026, 30 ZIP files: hold-out Brazil and Argentina, base-volatility days). Duplicate files are harmless: rows are de-duplicated by date and option. AR-2019-1T (25 and 28 Oct 2019) was not bought; BMA and PAM were not bought.
 
 **Stooq files:** `ewz_us_d.csv`, `eww_us_d.csv`, `inda_us_d.csv`, `ech_us_d.csv`, `argt_us_d.csv`, `ggal_us_d.csv`, `ypf_us_d.csv` from `https://stooq.com/q/d/l/?s=<ticker>.us&i=d`, downloaded on 13 Nov 2026.
 
@@ -53,7 +53,15 @@ python -W ignore codigo/figuras.py data datos/event_inputs.csv raw/cierres raw/f
 
 `figuras.py` also needs `out/drag_permanente_meses.csv`, written by `drag_permanente.py`.
 
-### Pre-registered run (11 Nov 2026)
+### Intrinsic-value marks (v1.1.0)
+
+```bash
+python codigo/revision_cuentas.py
+```
+
+No data and no arguments: the inputs are transcribed in the file from `results/registro_final.csv` and `results/framework_output_final_2026-11-13.txt`. It writes `revision_out.json` to the working folder; compare it with `results/revision_out.json` (identical bytes). See `CHANGELOG.md` for the formula and for the known issue with the U.S. liquidity flag.
+
+### In-sample run (11 Nov 2026)
 
 ```bash
 python codigo/run_events.py data datos/event_inputs.csv out_pre
@@ -62,11 +70,11 @@ python codigo/liquidity_test.py raw/ivol datos/event_inputs.csv out_pre/prueba_l
 
 Use only the B3 files available on 11 Nov (all of the above except M102026) and only the first iVolatility purchase. **Always pass the three arguments to `run_events.py`:** its built-in defaults point to the working folders of the original session and will not exist on your machine.
 
-The inputs in `inputs/` are the corrected version of 13 Nov (see "Input changes" below). With them, `run_events.py` reproduces the pre-registered registry except one row (rule `v1` of EWZ, BR-2022-2T) and the small rate effects on BOVA11 listed in `results/cambio_tasa_bova11.csv`. The 33/33 exact match was obtained with the 11 Nov inputs.
+The inputs in `inputs/` are the corrected version of 13 Nov (see "Input changes" below). With them, `run_events.py` reproduces the 11 Nov registry except one row (rule `v1` of EWZ, BR-2022-2T) and the small rate effects on BOVA11 listed in `results/cambio_tasa_bova11.csv`. The 33/33 exact match was obtained with the 11 Nov inputs.
 
 `run_events.py` should be run with only the first iVolatility purchase in `data/ivol/`. The frozen `framework.py` does not bound the backward search for the base volatility in events without an earlier first round, and RV20 takes the last 21 closes available; with several windows of the same ticker in one folder (EWZ now has 2014, 2018, 2022 and 2026) RV20 would mix days from other years. `run_oos.py` and `run_final.py` avoid this by passing to `framework.py` only the data in [t0 − 45 days, t1] of each event (argument `1` above); argument `0` runs without that window and gives `results/registro_final_sin_ventana.csv`.
 
-### Out-of-sample run (12 Nov 2026)
+### First hold-out run (12 Nov 2026)
 
 ```bash
 python -W ignore codigo/run_oos.py raw/ivol datos/event_inputs.csv out_oos
@@ -95,7 +103,7 @@ The generated files are identical to `inputs/` except for line endings (the csv 
 | `out/drag_permanente.txt` | `results/drag_permanente.txt` | permanent-hedge comparison (EWZ, VXEWZ) |
 | `out/analisis_extra.txt`, `out/marcado_intrinseco.csv`, `out/severidad_estimada_vs_realizada.csv` | same names in `results/` | intrinsic-value marking and severity check |
 | `figuras/fig1..fig4`, `figuras/tabla_cuatro_resultados.csv` | `results/tabla_cuatro_resultados.csv` | figures are not stored in the repository; they are regenerated |
-| `out_pre/registro_eventos.csv` | `results/preregistration_2026-11-11/registro_eventos.csv` | pre-registered run, 33 rows |
+| `out_pre/registro_eventos.csv` | `results/preregistration_2026-11-11/registro_eventos.csv` | in-sample run of 11 Nov, 33 rows |
 | `out_pre/framework_output.txt` | `results/preregistration_2026-11-11/framework_output_2026-11-11.txt` | main sample, per-case detail |
 | `out_pre/framework_output_bova_otros.txt` | `results/preregistration_2026-11-11/framework_output_bova_otros.txt` | exploratory BOVA11 cases |
 | `out/escalas_cierres.csv` | `results/escalas_cierres.csv` | Stooq-to-iVolatility scale factors (see the Stooq caveat) |
@@ -105,7 +113,7 @@ Key columns: `decision`, `patas`, `costo`, `P_malo_protocolo`, `retorno_real`, `
 
 **Stooq caveat.** Stooq closes are dividend-adjusted and Stooq re-adjusts the history when new distributions occur, so a later download can be scaled differently. `run_final.py` rescales the Stooq series to iVolatility's unadjusted closes on common days; the factors obtained with the 13 Nov 2026 files are in `results/escalas_cierres.csv`. Small differences in RV20-based fields after a re-adjustment are expected; decisions should not change.
 
-## Input changes after the pre-registration
+## Input changes after the 11 Nov run
 
 - **13 Nov:** `event_inputs.csv` and `event_probabilities.csv` use the Brazil 2022-2T grid without RPS and 1xBet. With the 11 Nov version the registry is the same except 1 row (v1 of EWZ 2022-2T).
 - **13 Nov (11:30):** the rate `r` of the BR events is the Selic over rate at t0 (BCB SGS series 1178: 10.90 / 6.40 / 13.65 / 13.65%). With the earlier rates (0.11 / 0.065 / 0.1365 / 0.145) 15 BOVA11 rows change by at most 1.7 bp (`results/cambio_tasa_bova11.csv`).
@@ -116,13 +124,13 @@ All files in `results/` (outside `preregistration_2026-11-11/`) were produced wi
 ## 4. Inputs written in the scripts (with their source)
 
 - US rate for the ETFs: 4-week T-bill. `run_events.py`: auction closest to t0 (2022 3.9%; 2024 5.37%; 2026 3.95%). `run_oos.py`: approximated by year (2014 0.02%; 2015 0.1%; 2017 1.0%; 2018 2.2%; 2019 2.0%; 2021 0.05%; 2023 5.3%; 2025 4.0%). `run_final.py` reads FRED `DTB4WK`. The effect is negligible (1–4 weeks to expiry, spot by put–call parity).
-- r_previo of EWZ for the 2026 first round in the pre-registered run (no chains for 2 and 5 Oct in the first purchase): 38.19 → 42.98 = +12.54%, from press reports (Rio Times via UA.News; Kalkine). The final run uses the purchased chains instead.
+- r_previo of EWZ for the 2026 first round in the 11 Nov run (no chains for 2 and 5 Oct in the first purchase): 38.19 → 42.98 = +12.54%, from press reports (Rio Times via UA.News; Kalkine). The final run uses the purchased chains instead.
 - Probabilities, polls and dates: all from `inputs/event_inputs.csv` (sources in `inputs/event_probabilities.csv` and `code/data_probs.py`).
 
 ## 5. Known limitations of the runs
 
-- Pre-registered run: ETF base volatility outside the rule (the ideal-day chains and 21 daily closes were missing); flagged in each case as "FUERA DE REGLA".
-- BOVA11 2026-2T in the pre-registered run: base volatility measured on 5 Oct (the COTAHIST of 20 Oct 2026 was not yet available). The final run uses M102026.
+- 11 Nov run: ETF base volatility outside the rule (the ideal-day chains and 21 daily closes were missing); flagged in each case as "FUERA DE REGLA".
+- BOVA11 2026-2T in the 11 Nov run: base volatility measured on 5 Oct (the COTAHIST of 20 Oct 2026 was not yet available). The final run uses M102026.
 - BOVA11 2026-1T: spot by parity broken on 2 Oct (196.6 against a last trade of 190.0); result not conclusive. EWZ 2026-1T is conclusive.
 - Argentina: no option chains before the eve, so in most cases the base volatility is a 20-day realized volatility; AR-2019-1T has no data; several GGAL/YPF cases are not evaluable (no ATM implied volatility).
 
@@ -145,7 +153,7 @@ Logs, column names and decisions are in Spanish. The terms needed to read them:
 | `P_real_protocolo`, `P_real_ingenuo` | realized hedged return with the protocol / with the naive benchmark (put about 5% out of the money) |
 | `resultado` | realized outcome: `malo` (bad) / `bueno` (good); `cubrio` = a hedge was bought |
 | `regla` | `principal` (main rule), `piso50`, `v1` (the two alternative rules), `theta10`, `theta50` (load-limit robustness) |
-| `grupo` | `main` (pre-registered sample), `expl` (exploratory BOVA11), `oos-BR`, `oos-CL`, `oos-AR` (out of sample) |
+| `grupo` | `main` (in-sample cases), `expl` (exploratory BOVA11), `oos-BR`, `oos-CL`, `oos-AR` (hold-out cases; the `oos` labels are historical) |
 | `marcas` | data flags, e.g. `último negocio` = last trade used instead of parity; `FUERA DE REGLA` = outside the rule |
 | `vispera`, `veredicto` (liquidity screen) | eve; `PASA` = passes, `NO PASA` = fails, `SOLO PUT` = only the put side passes |
 
@@ -171,6 +179,7 @@ ad1fedc54d47c882aa5399f4b31fce9f39b4e04aa0c1a948ada179b5f83c4040  data_probs.py
 a63bb3032513f98a6ae96b31b43fcf537cd264298ee566de4bd6387db16a7dd6  devig.py
 1a15dc273b5c543a1e8ce618680e702c26d81e07a623861aebbe940cdc4c5f92  build_event_inputs.py
 60ce684cfbe3c4eed240755894195bf687d5b8d9d75eb003e2879cf453c44b00  fichas_eventos.py
+38b44ef173ecd28d16ed7ecffa43eb0c83a2c37cf1e5592840389b5f1b9f659e  revision_cuentas.py
 ```
 
 `framework.py` 221320a15437 is identical to its earlier draft b1b8428a56f0 except that the probability grid is bounded to [0.01, 0.99], which changes no result. Earlier versions of other scripts that give the same numbers: `run_final.py` 84787a9d1ab2 (before the robustness mode was added), `figuras.py` e6ad3e3f0108 (Spanish labels), `liquidity_test.py` 84bd5a609c12 (before Argentina was added).

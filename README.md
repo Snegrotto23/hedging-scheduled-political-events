@@ -1,10 +1,12 @@
-# Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors
+# Hedging Scheduled Political Events with Listed Options: A Mechanical Rule for Long-Only Emerging-Market Investors
 
 Code, inputs and results for the paper
 
-> Negrotto, Santiago (2026). *Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors.* SSRN Working Paper. <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7701898>
+> Negrotto, Santiago (2026). *Hedging Scheduled Political Events with Listed Options: A Mechanical Rule for Long-Only Emerging-Market Investors.* SSRN Working Paper. <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7701898>
 
-The paper proposes a mechanical, pre-registered rule that tells a long-only investor holding an emerging-market equity position whether to hedge a scheduled political event (an election round, a primary, a vote count) and, if so, with which listed option structure. Using only information available on the last business day before the event, the rule builds a grid of probabilities for the outcome from prediction markets, polls and published forecasts; estimates the price move each outcome would cause from the option term structure (and from an "event beta" when an earlier shock is available); prices the options with a two-scenario lognormal mixture; and picks, among the structures that fit a cash budget and an insurance-load limit, the one with the smallest loss in the bad scenario. If no structure passes, the decision is not to hedge, and that case is recorded too.
+The paper proposes a mechanical rule that tells a long-only investor holding an emerging-market equity position whether to hedge a scheduled political event (an election round, a primary, a vote count) and, if so, with which listed option structure. Using only information available on the last business day before the event, the rule builds a grid of probabilities for the outcome from prediction markets, polls and published forecasts; estimates the price move each outcome would cause from the option term structure (and from an "event beta" when an earlier shock is available); prices the options with a two-scenario lognormal mixture; and picks, among the structures that fit a cash budget and an insurance-load limit, the one with the smallest loss in the bad scenario. If no structure passes, the decision is not to hedge, and that case is recorded too.
+
+The main rule was fixed on 11 November 2026, after the 2026 Brazilian runoff and after the eleven in-sample cases had been examined; the code was frozen the same day, and every case added afterward (the hold-out cases) was run with it unchanged. There was no dated public registration before the events. The paper's Table 2 dates every step.
 
 This repository lets anyone check the exact code that produced the paper's numbers, re-run it, and compare the output line by line with the published registry.
 
@@ -15,7 +17,7 @@ Please cite the paper (above). To cite this repository specifically, use the met
 ```bibtex
 @techreport{negrotto2026hedging,
   author      = {Negrotto, Santiago},
-  title       = {Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors},
+  title       = {Hedging Scheduled Political Events with Listed Options: A Mechanical Rule for Long-Only Emerging-Market Investors},
   institution = {SSRN},
   type        = {Working Paper},
   year        = {2026},
@@ -25,18 +27,21 @@ Please cite the paper (above). To cite this repository specifically, use the met
 
 ## The framework is frozen
 
-`code/framework.py` (SHA-256 prefix `221320a15437`) was frozen on 11 November 2026, before the pre-registered sample was run. Every number in the paper comes from that file. **It will not be edited in this repository.** Any correction, extension or bug fix will be released as a separate, clearly versioned file and reported separately, so the frozen version always stays available and verifiable. The same applies to the other scripts listed in the hash table below: they are byte-for-byte the files used for the paper.
+`code/framework.py` (SHA-256 prefix `221320a15437`) was frozen on 11 November 2026, after the in-sample cases had been examined and before the hold-out cases were run. Every number in the paper comes from that file, directly or, for the intrinsic-value marks added in v1.1.0, through `revision_cuentas.py`, which recomputes the marks from the archived record without running the framework. **It will not be edited in this repository.** Any correction, extension or bug fix will be released as a separate, clearly versioned file and reported separately, so the frozen version always stays available and verifiable. The same applies to the other scripts listed in the hash table below: they are byte-for-byte the files used for the paper.
 
 If you modify any file in `code/`, your results are no longer a replication of the paper.
 
 ## What is in the repository
 
 ```
-code/                 the 19 Python scripts used for the paper, unchanged (see hashes below)
+code/                 the 20 Python scripts used for the paper (see hashes below)
 inputs/               event inputs: probabilities, polls, scenarios, dates (built from code/data_*.py)
-results/              outputs of the final run (13 Nov 2026) used in the paper
+results/              outputs of the final run (13 Nov 2026) used in the paper, and
+                      revision_out.json (intrinsic-value marks, v1.1.0)
 results/preregistration_2026-11-11/
-                      the pre-registered run of 11 Nov 2026 (main sample), kept as a time stamp
+                      the run of 11 Nov 2026 (in-sample cases), kept as a time stamp;
+                      the folder name is historical: the run was not pre-registered
+CHANGELOG.md          what changed in each release
 data_download/        helper script that downloads the free raw data (B3, Stooq, FRED)
 docs/REPLICATION.md   step-by-step replication, and how to read the outputs
 docs/DATA_SOURCES.md  every raw-data source, what is and is not included, and why
@@ -69,7 +74,7 @@ python codigo/build_cotahist_pkl.py raw/cotahist data/cotahist_bova_petr.pkl
 python -W ignore codigo/run_final.py data datos/event_inputs.csv raw/cierres raw/fred/DTB4WK.csv out 1
 ```
 
-Then compare `out/registro_final.csv` with `results/registro_final.csv` (150 rows: 50 cases × 3 rules). The full sequence, including the pre-registered run, the robustness runs, the permanent-hedge comparison and the figures, is in [`docs/REPLICATION.md`](docs/REPLICATION.md).
+Then compare `out/registro_final.csv` with `results/registro_final.csv` (150 rows: 50 cases × 3 rules). The full sequence, including the 11 Nov in-sample run, the robustness runs, the permanent-hedge comparison and the figures, is in [`docs/REPLICATION.md`](docs/REPLICATION.md).
 
 ## File hashes
 
@@ -83,13 +88,14 @@ SHA-256 of every file in `code/` (the first 12 characters are the identifiers us
 | `cotahist.py` | `d27f5c04d432` | parses B3 COTAHIST |
 | `mixture.py` | `0567196bc9ac` | two-lognormal mixture fitted to an option chain |
 | `build_cotahist_pkl.py` | `b0e3d60ebf6d` | builds the B3 database |
-| `run_events.py` | `48d17ece9776` | pre-registered run (11 Nov) |
-| `run_oos.py` | `f7bbd7da6f46` | out-of-sample run (12 Nov) |
+| `run_events.py` | `48d17ece9776` | in-sample run (11 Nov) |
+| `run_oos.py` | `f7bbd7da6f46` | first hold-out run (12 Nov) |
 | `liquidity_test.py` | `72b28f84d289` | liquidity screen |
 | `run_final.py` | `a5cb66c3424f` | final run used in the paper (13 Nov) |
 | `drag_permanente.py` | `8fd4a916e256` | permanent-hedge comparison |
-| `analisis_extra.py` | `5b91b6a71140` | intrinsic-value marking, severity check |
+| `analisis_extra.py` | `5b91b6a71140` | marking at the larger of mid and intrinsic value, severity check |
 | `figuras.py` | `d6055c7ee855` | figures 1–4 |
+| `revision_cuentas.py` | `38b44ef173ec` | intrinsic-value marks, totals by rule and sample, Table IA.4 (added in v1.1.0) |
 | `data_events.py` | `79d22f900935` | event definitions and polls (source data) |
 | `data_probs.py` | `ad1fedc54d47` | prediction-market and forecast sources (source data) |
 | `data_scen.py` | `22ff91489076` | scenario definitions (source data) |

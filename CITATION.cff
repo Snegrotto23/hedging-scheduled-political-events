@@ -7,8 +7,8 @@ authors:
     given-names: Santiago
     city: Montevideo
     country: UY
-version: "1.0.0"
-date-released: "2026-11-14"
+version: "1.1.0"
+date-released: "2026-11-20"
 license: MIT
 repository-code: "https://github.com/Snegrotto23/hedging-scheduled-political-events"
 keywords:
@@ -18,10 +18,9 @@ keywords:
   - hedging
   - emerging markets
   - prediction markets
-  - pre-registration
 preferred-citation:
   type: report
-  title: "Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors"
+  title: "Hedging Scheduled Political Events with Listed Options: A Mechanical Rule for Long-Only Emerging-Market Investors"
   authors:
     - family-names: Negrotto
       given-names: Santiago

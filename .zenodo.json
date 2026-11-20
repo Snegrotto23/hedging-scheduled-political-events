@@ -1,7 +1,7 @@
 {
   "title": "Hedging Scheduled Political Events: replication code, inputs and results",
   "upload_type": "software",
-  "description": "<p>Code, event inputs and results for the paper <em>Hedging Scheduled Political Events: Cheap Convexity for Long-Only Emerging-Market Investors</em> (Santiago Negrotto, SSRN Working Paper, 2026). The decision protocol in <code>code/framework.py</code> (SHA-256 prefix 221320a15437) was frozen on 11 November 2026 and is archived here unchanged, together with the pre-registered run of 11 November 2026 and the final run of 13 November 2026 reported in the paper. Purchased option data (iVolatility) and third-party price data (B3, Stooq, FRED) are not included; the repository lists the exact files and ticker-days and provides a download script for the public sources.</p>",
+  "description": "<p>Code, event inputs and results for the paper <em>Hedging Scheduled Political Events with Listed Options: A Mechanical Rule for Long-Only Emerging-Market Investors</em> (Santiago Negrotto, SSRN Working Paper, 2026). The decision protocol in <code>code/framework.py</code> (SHA-256 prefix 221320a15437) was frozen on 11 November 2026 and is archived here unchanged, together with the in-sample run of 11 November 2026 and the final run of 13 November 2026 reported in the paper. The main rule was fixed after the 2026 Brazilian runoff; there was no dated public registration before the events. Version 1.1.0 adds the intrinsic-value marks of the revised paper (code/revision_cuentas.py), computed from the archived record. Purchased option data (iVolatility) and third-party price data (B3, Stooq, FRED) are not included; the repository lists the exact files and ticker-days and provides a download script for the public sources.</p>",
   "creators": [
     {
       "name": "Negrotto, Santiago"
@@ -14,8 +14,7 @@
     "options",
     "hedging",
     "emerging markets",
-    "prediction markets",
-    "pre-registration"
+    "prediction markets"
   ],
   "related_identifiers": [
     {
@@ -26,5 +25,5 @@
     }
   ],
   "language": "eng",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
