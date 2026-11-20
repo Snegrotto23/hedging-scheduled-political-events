@@ -59,7 +59,22 @@ python -W ignore codigo/figuras.py data datos/event_inputs.csv raw/cierres raw/f
 python codigo/revision_cuentas.py
 ```
 
-No data and no arguments: the inputs are transcribed in the file from `results/registro_final.csv` and `results/framework_output_final_2026-11-13.txt`. It writes `revision_out.json` to the working folder; compare it with `results/revision_out.json` (identical bytes). See `CHANGELOG.md` for the formula and for the known issue with the U.S. liquidity flag.
+No data and no arguments: the inputs are transcribed in the file from `results/registro_final.csv` and `results/framework_output_final_2026-11-13.txt`. It writes `revision_out.json` to the working folder; compare it with `results/revision_out.json` (identical bytes). See `CHANGELOG.md` for the formula.
+
+### Revision of 20 Nov 2026 (v1.2.0): liquidity filter as specified and executable marks
+
+The record reported in the paper uses the corrected adapter. `run_final_estricto.py` takes the same arguments as `run_final.py` and runs it unchanged with `ivol_adapter_estricto.py` in place of `ivol_adapter.py`; `framework.py` is not touched.
+
+```bash
+python -W ignore codigo/run_final_estricto.py data datos/event_inputs.csv raw/cierres raw/fred/DTB4WK.csv out_est 1             # record in the paper
+python -W ignore codigo/run_final_estricto.py data datos/event_inputs.csv raw/cierres raw/fred/DTB4WK.csv out_est_sv 0          # without data window
+python -W ignore codigo/run_final_estricto.py data datos/event_inputs.csv raw/cierres raw/fred/DTB4WK.csv out_est_rob 1 robustez # theta 10% and 50%
+python -W ignore codigo/revision_b1_patas.py data out out_rob out_rev
+python -W ignore codigo/revision_b3_marcado_ejecutable.py data out_rev codificado=out codificado_theta=out_rob estricto=out_est estricto_theta=out_est_rob
+python codigo/revision_cuentas_estricto.py out_rev/revision_b3_marcado_ejecutable.csv
+```
+
+Compare `out_est/registro_final.csv` with `results/revision_b2_registro_estricto.csv` (150 rows), `out_est_sv/registro_final.csv` with `results/revision_b2_registro_estricto_sin_ventana.csv`, `out_est_rob/registro_final.csv` with `results/revision_b2_robustez_theta_estricto.csv`, the log with `results/revision_b2_framework_output_estricto.txt`, the outputs of the two `revision_b*` scripts with the files of the same name in `results/`, and `revision_out_estricto.json` with `results/revision_out_estricto.json`. `results/revision_b2_filtro_estricto_cambios.csv` lists the rows that differ between the two adapters (three in the record: YPF in the 2025 Buenos Aires election). `results/revision_b_resumen_2026-11-20.md` summarizes the three analyses (in Spanish).
 
 ### In-sample run (11 Nov 2026)
 
@@ -180,6 +195,11 @@ a63bb3032513f98a6ae96b31b43fcf537cd264298ee566de4bd6387db16a7dd6  devig.py
 1a15dc273b5c543a1e8ce618680e702c26d81e07a623861aebbe940cdc4c5f92  build_event_inputs.py
 60ce684cfbe3c4eed240755894195bf687d5b8d9d75eb003e2879cf453c44b00  fichas_eventos.py
 38b44ef173ecd28d16ed7ecffa43eb0c83a2c37cf1e5592840389b5f1b9f659e  revision_cuentas.py
+c218cd58a420ce74890ef8aa4370ed4899a32cc33df7844b0e5808ee3b5ea5d0  ivol_adapter_estricto.py
+a254e7b2f133b557c5f782887a5a845413e1b0673a2f60ae9760286201345ae8  run_final_estricto.py
+2fa5ef294e9bac435afbd0a6c49f92c6615daa371ca2d55d8ddc18023d2e0f4c  revision_b1_patas.py
+1d7a8472c2370a3ada34ee7bbc855c6bd37ee44c2fe0c394828088b810541964  revision_b3_marcado_ejecutable.py
+6e03913b88bf28d4f32baa7550237ae35758914c546beff0dfe9b26c5cdc4641  revision_cuentas_estricto.py
 ```
 
 `framework.py` 221320a15437 is identical to its earlier draft b1b8428a56f0 except that the probability grid is bounded to [0.01, 0.99], which changes no result. Earlier versions of other scripts that give the same numbers: `run_final.py` 84787a9d1ab2 (before the robustness mode was added), `figuras.py` e6ad3e3f0108 (Spanish labels), `liquidity_test.py` 84bd5a609c12 (before Argentina was added).

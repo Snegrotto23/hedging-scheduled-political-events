@@ -7,7 +7,7 @@ authors:
     given-names: Santiago
     city: Montevideo
     country: UY
-version: "1.1.0"
+version: "1.2.0"
 date-released: "2026-11-20"
 license: MIT
 repository-code: "https://github.com/Snegrotto23/hedging-scheduled-political-events"

@@ -27,17 +27,20 @@ Please cite the paper (above). To cite this repository specifically, use the met
 
 ## The framework is frozen
 
-`code/framework.py` (SHA-256 prefix `221320a15437`) was frozen on 11 November 2026, after the in-sample cases had been examined and before the hold-out cases were run. Every number in the paper comes from that file, directly or, for the intrinsic-value marks added in v1.1.0, through `revision_cuentas.py`, which recomputes the marks from the archived record without running the framework. **It will not be edited in this repository.** Any correction, extension or bug fix will be released as a separate, clearly versioned file and reported separately, so the frozen version always stays available and verifiable. The same applies to the other scripts listed in the hash table below: they are byte-for-byte the files used for the paper.
+`code/framework.py` (SHA-256 prefix `221320a15437`) was frozen on 11 November 2026, after the in-sample cases had been examined and before the hold-out cases were run. Every number in the paper comes from that file, directly or through scripts that recompute marks from its output without running the framework. Since v1.2.0 the record reported in the paper is the run with `ivol_adapter_estricto.py`, a corrected copy of the data adapter that applies the liquidity filter for U.S.-listed options as specified (open interest of at least 100 contracts); the run with the adapter frozen on 11 November 2026, which also admitted options by daily volume, is kept and compared in Section 7.5 of the paper (see `CHANGELOG.md`). **It will not be edited in this repository.** Any correction, extension or bug fix will be released as a separate, clearly versioned file and reported separately, so the frozen version always stays available and verifiable. The same applies to the other scripts listed in the hash table below: they are byte-for-byte the files used for the paper.
 
 If you modify any file in `code/`, your results are no longer a replication of the paper.
 
 ## What is in the repository
 
 ```
-code/                 the 20 Python scripts used for the paper (see hashes below)
+code/                 the 25 Python scripts used for the paper (see hashes below)
 inputs/               event inputs: probabilities, polls, scenarios, dates (built from code/data_*.py)
-results/              outputs of the final run (13 Nov 2026) used in the paper, and
-                      revision_out.json (intrinsic-value marks, v1.1.0)
+results/              outputs of the final run (13 Nov 2026) with the frozen adapter;
+                      revision_out.json (intrinsic-value marks, v1.1.0);
+                      revision_b*.csv/.txt/.md and revision_out_estricto.json (v1.2.0):
+                      the record with the corrected adapter, reported in the paper,
+                      open interest of every leg and executable marks
 results/preregistration_2026-11-11/
                       the run of 11 Nov 2026 (in-sample cases), kept as a time stamp;
                       the folder name is historical: the run was not pre-registered
@@ -95,7 +98,12 @@ SHA-256 of every file in `code/` (the first 12 characters are the identifiers us
 | `drag_permanente.py` | `8fd4a916e256` | permanent-hedge comparison |
 | `analisis_extra.py` | `5b91b6a71140` | marking at the larger of mid and intrinsic value, severity check |
 | `figuras.py` | `d6055c7ee855` | figures 1–4 |
-| `revision_cuentas.py` | `38b44ef173ec` | intrinsic-value marks, totals by rule and sample, Table IA.4 (added in v1.1.0) |
+| `revision_cuentas.py` | `38b44ef173ec` | intrinsic-value marks and totals under the frozen adapter (added in v1.1.0) |
+| `ivol_adapter_estricto.py` | `c218cd58a420` | corrected adapter: liquidity filter as specified (added in v1.2.0) |
+| `run_final_estricto.py` | `a254e7b2f133` | runs `run_final.py` with the corrected adapter; the record in the paper (v1.2.0) |
+| `revision_b1_patas.py` | `2fa5ef294e9b` | open interest and volume of every selected leg (v1.2.0) |
+| `revision_b3_marcado_ejecutable.py` | `1d7a8472c237` | executable, mid and intrinsic marks on t1 (v1.2.0) |
+| `revision_cuentas_estricto.py` | `6e03913b88bf` | intrinsic-value marks and totals under the corrected adapter: Table 8, Table IA.4 (v1.2.0) |
 | `data_events.py` | `79d22f900935` | event definitions and polls (source data) |
 | `data_probs.py` | `ad1fedc54d47` | prediction-market and forecast sources (source data) |
 | `data_scen.py` | `22ff91489076` | scenario definitions (source data) |
